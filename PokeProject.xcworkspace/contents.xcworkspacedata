@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:PokeEngine_iOS/PokeEngine_iOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:PokeEngine/PokeEngine.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:RPGameEngine/RPGameEngine.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Products">
+   </FileRef>
+</Workspace>
