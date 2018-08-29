@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		740FFD452134522E00193C58 /* NSString+cpp.h in Headers */ = {isa = PBXBuildFile; fileRef = 740FFD432134522E00193C58 /* NSString+cpp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		740FFD462134522E00193C58 /* NSString+cpp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 740FFD442134522E00193C58 /* NSString+cpp.mm */; };
+		749D6AF0212DA19B00809FDB /* libPokeEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 749D6AEF212DA19B00809FDB /* libPokeEngine.a */; };
+		749D6AF3212DA1C300809FDB /* PokeGame_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 749D6AF1212DA1C300809FDB /* PokeGame_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749D6AF4212DA1C300809FDB /* PokeGame_iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 749D6AF2212DA1C300809FDB /* PokeGame_iOS.mm */; };
+		749D6AFC212DA21C00809FDB /* PokeEngine_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749D6AFB212DA21C00809FDB /* PokeEngine_iOSTests.swift */; };
+		749D6AFE212DA21C00809FDB /* PokeEngine_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A5908C212D619E00BC8AC8 /* PokeEngine_iOS.framework */; };
+		74A59091212D619E00BC8AC8 /* PokeEngine_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 74A5908F212D619E00BC8AC8 /* PokeEngine_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		749D6AFF212DA21C00809FDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74A59083212D619E00BC8AC8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74A5908B212D619E00BC8AC8;
+			remoteInfo = PokeEngine_iOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		740FFD432134522E00193C58 /* NSString+cpp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+cpp.h"; sourceTree = "<group>"; };
+		740FFD442134522E00193C58 /* NSString+cpp.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSString+cpp.mm"; sourceTree = "<group>"; };
+		74296A042136CBB200FAA1BB /* libRPGameEngine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRPGameEngine.a; path = ../Products/libRPGameEngine.a; sourceTree = "<group>"; };
+		749D6AEF212DA19B00809FDB /* libPokeEngine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPokeEngine.a; path = ../Products/libPokeEngine.a; sourceTree = "<group>"; };
+		749D6AF1212DA1C300809FDB /* PokeGame_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PokeGame_iOS.h; sourceTree = "<group>"; };
+		749D6AF2212DA1C300809FDB /* PokeGame_iOS.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PokeGame_iOS.mm; sourceTree = "<group>"; };
+		749D6AF9212DA21C00809FDB /* PokeEngine_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokeEngine_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		749D6AFB212DA21C00809FDB /* PokeEngine_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeEngine_iOSTests.swift; sourceTree = "<group>"; };
+		749D6AFD212DA21C00809FDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74A5908C212D619E00BC8AC8 /* PokeEngine_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PokeEngine_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74A5908F212D619E00BC8AC8 /* PokeEngine_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PokeEngine_iOS.h; sourceTree = "<group>"; };
+		74A59090212D619E00BC8AC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		749D6AF6212DA21C00809FDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				749D6AFE212DA21C00809FDB /* PokeEngine_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74A59088212D619E00BC8AC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				749D6AF0212DA19B00809FDB /* libPokeEngine.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		740FFD422134521000193C58 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				740FFD432134522E00193C58 /* NSString+cpp.h */,
+				740FFD442134522E00193C58 /* NSString+cpp.mm */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		749D6AED212DA16E00809FDB /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				749D6AF1212DA1C300809FDB /* PokeGame_iOS.h */,
+				749D6AF2212DA1C300809FDB /* PokeGame_iOS.mm */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		749D6AEE212DA19B00809FDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				749D6AEF212DA19B00809FDB /* libPokeEngine.a */,
+				74296A042136CBB200FAA1BB /* libRPGameEngine.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		749D6AFA212DA21C00809FDB /* PokeEngine_iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				749D6AFB212DA21C00809FDB /* PokeEngine_iOSTests.swift */,
+				749D6AFD212DA21C00809FDB /* Info.plist */,
+			);
+			path = PokeEngine_iOSTests;
+			sourceTree = "<group>";
+		};
+		74A59082212D619E00BC8AC8 = {
+			isa = PBXGroup;
+			children = (
+				74A5908E212D619E00BC8AC8 /* PokeEngine_iOS */,
+				749D6AFA212DA21C00809FDB /* PokeEngine_iOSTests */,
+				74A5908D212D619E00BC8AC8 /* Products */,
+				749D6AEE212DA19B00809FDB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		74A5908D212D619E00BC8AC8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74A5908C212D619E00BC8AC8 /* PokeEngine_iOS.framework */,
+				749D6AF9212DA21C00809FDB /* PokeEngine_iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74A5908E212D619E00BC8AC8 /* PokeEngine_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				740FFD422134521000193C58 /* Categories */,
+				749D6AED212DA16E00809FDB /* Game */,
+				74A5908F212D619E00BC8AC8 /* PokeEngine_iOS.h */,
+				74A59090212D619E00BC8AC8 /* Info.plist */,
+			);
+			path = PokeEngine_iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		74A59089212D619E00BC8AC8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74A59091212D619E00BC8AC8 /* PokeEngine_iOS.h in Headers */,
+				740FFD452134522E00193C58 /* NSString+cpp.h in Headers */,
+				749D6AF3212DA1C300809FDB /* PokeGame_iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		749D6AF8212DA21C00809FDB /* PokeEngine_iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 749D6B01212DA21C00809FDB /* Build configuration list for PBXNativeTarget "PokeEngine_iOSTests" */;
+			buildPhases = (
+				749D6AF5212DA21C00809FDB /* Sources */,
+				749D6AF6212DA21C00809FDB /* Frameworks */,
+				749D6AF7212DA21C00809FDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				749D6B00212DA21C00809FDB /* PBXTargetDependency */,
+			);
+			name = PokeEngine_iOSTests;
+			productName = PokeEngine_iOSTests;
+			productReference = 749D6AF9212DA21C00809FDB /* PokeEngine_iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		74A5908B212D619E00BC8AC8 /* PokeEngine_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74A59094212D619E00BC8AC8 /* Build configuration list for PBXNativeTarget "PokeEngine_iOS" */;
+			buildPhases = (
+				74A59087212D619E00BC8AC8 /* Sources */,
+				74A59088212D619E00BC8AC8 /* Frameworks */,
+				74A59089212D619E00BC8AC8 /* Headers */,
+				74A5908A212D619E00BC8AC8 /* Resources */,
+				74296A032136CA5B00FAA1BB /* Copy Products */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PokeEngine_iOS;
+			productName = PokeEngine_iOS;
+			productReference = 74A5908C212D619E00BC8AC8 /* PokeEngine_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74A59083212D619E00BC8AC8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Renaud Buisine";
+				TargetAttributes = {
+					749D6AF8212DA21C00809FDB = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					74A5908B212D619E00BC8AC8 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 74A59086212D619E00BC8AC8 /* Build configuration list for PBXProject "PokeEngine_iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 74A59082212D619E00BC8AC8;
+			productRefGroup = 74A5908D212D619E00BC8AC8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74A5908B212D619E00BC8AC8 /* PokeEngine_iOS */,
+				749D6AF8212DA21C00809FDB /* PokeEngine_iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		749D6AF7212DA21C00809FDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74A5908A212D619E00BC8AC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74296A032136CA5B00FAA1BB /* Copy Products */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Products";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PRODUCTS_DIR=\"${SRCROOT}/../Products/\"\n\n#Copy lib\ncp -R ${BUILT_PRODUCTS_DIR}/*.framework $PRODUCTS_DIR";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		749D6AF5212DA21C00809FDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				749D6AFC212DA21C00809FDB /* PokeEngine_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74A59087212D619E00BC8AC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				749D6AF4212DA1C300809FDB /* PokeGame_iOS.mm in Sources */,
+				740FFD462134522E00193C58 /* NSString+cpp.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		749D6B00212DA21C00809FDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74A5908B212D619E00BC8AC8 /* PokeEngine_iOS */;
+			targetProxy = 749D6AFF212DA21C00809FDB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		749D6B02212DA21C00809FDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = PokeEngine_iOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ig.PokeEngine-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		749D6B03212DA21C00809FDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = PokeEngine_iOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ig.PokeEngine-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		74A59092212D619E00BC8AC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		74A59093212D619E00BC8AC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		74A59095212D619E00BC8AC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "${SRCROOT}/../Products/**";
+				INFOPLIST_FILE = PokeEngine_iOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "${SRCROOT}/../Products/**";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ig.PokeEngine-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		74A59096212D619E00BC8AC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "${SRCROOT}/../Products/**";
+				INFOPLIST_FILE = PokeEngine_iOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "${SRCROOT}/../Products/**";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ig.PokeEngine-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		749D6B01212DA21C00809FDB /* Build configuration list for PBXNativeTarget "PokeEngine_iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				749D6B02212DA21C00809FDB /* Debug */,
+				749D6B03212DA21C00809FDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74A59086212D619E00BC8AC8 /* Build configuration list for PBXProject "PokeEngine_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74A59092212D619E00BC8AC8 /* Debug */,
+				74A59093212D619E00BC8AC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74A59094212D619E00BC8AC8 /* Build configuration list for PBXNativeTarget "PokeEngine_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74A59095212D619E00BC8AC8 /* Debug */,
+				74A59096212D619E00BC8AC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74A59083212D619E00BC8AC8 /* Project object */;
+}
