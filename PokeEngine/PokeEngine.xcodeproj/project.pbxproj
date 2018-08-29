@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74A58FBF212CAC6300BC8AC8 /* PokeGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74A58FBD212CAC6300BC8AC8 /* PokeGame.cpp */; };
+		74A58FC0212CAC6300BC8AC8 /* PokeGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74A58FBD212CAC6300BC8AC8 /* PokeGame.cpp */; };
+		74A58FC1212CAC6300BC8AC8 /* PokeGame.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74A58FBE212CAC6300BC8AC8 /* PokeGame.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		74A58FD3212CBA1E00BC8AC8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74A58FD2212CBA1D00BC8AC8 /* main.cpp */; };
+		74A58FDE212CBB2000BC8AC8 /* PokeGameTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74A58FDD212CBB2000BC8AC8 /* PokeGameTests.cpp */; };
+		74A58FE2212CBB5C00BC8AC8 /* libPokeEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A58FE1212CBB5C00BC8AC8 /* libPokeEngine.a */; };
+		74CBDB10212B639F00F3B732 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74CBDB0F212B639F00F3B732 /* main.cpp */; };
+		74CBDB17212B63FF00F3B732 /* libRPGameEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CBDB16212B63FF00F3B732 /* libRPGameEngine.a */; };
+		74CBDB1A212B64C900F3B732 /* libRPGameEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CBDB19212B64C900F3B732 /* libRPGameEngine.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74A58FDF212CBB5000BC8AC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74CBDAFA212B633800F3B732 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74CBDB01212B633800F3B732;
+			remoteInfo = PokeEngine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		74A58FCE212CBA1D00BC8AC8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		74CBDB0B212B639F00F3B732 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		74A58FBD212CAC6300BC8AC8 /* PokeGame.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PokeGame.cpp; sourceTree = "<group>"; };
+		74A58FBE212CAC6300BC8AC8 /* PokeGame.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PokeGame.hpp; sourceTree = "<group>"; };
+		74A58FD0212CBA1D00BC8AC8 /* PokeEngineTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PokeEngineTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		74A58FD2212CBA1D00BC8AC8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		74A58FDC212CBAEF00BC8AC8 /* catch.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = catch.hpp; path = ../../../ThirdParties/Cpp/Catch/catch.hpp; sourceTree = "<group>"; };
+		74A58FDD212CBB2000BC8AC8 /* PokeGameTests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PokeGameTests.cpp; sourceTree = "<group>"; };
+		74A58FE1212CBB5C00BC8AC8 /* libPokeEngine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPokeEngine.a; path = ../Products/libPokeEngine.a; sourceTree = "<group>"; };
+		74CBDB02212B633800F3B732 /* libPokeEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPokeEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		74CBDB0D212B639F00F3B732 /* PokeEngineDevelopperTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PokeEngineDevelopperTool; sourceTree = BUILT_PRODUCTS_DIR; };
+		74CBDB0F212B639F00F3B732 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		74CBDB16212B63FF00F3B732 /* libRPGameEngine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRPGameEngine.a; path = ../Products/RPGameEngine/libRPGameEngine.a; sourceTree = "<group>"; };
+		74CBDB19212B64C900F3B732 /* libRPGameEngine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRPGameEngine.a; path = ../Products/RPGameEngine/libRPGameEngine.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74A58FCD212CBA1D00BC8AC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74A58FE2212CBB5C00BC8AC8 /* libPokeEngine.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74CBDAFF212B633800F3B732 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74CBDB17212B63FF00F3B732 /* libRPGameEngine.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74CBDB0A212B639F00F3B732 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74CBDB1A212B64C900F3B732 /* libRPGameEngine.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74A58FC2212CAC6800BC8AC8 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				74A58FBD212CAC6300BC8AC8 /* PokeGame.cpp */,
+				74A58FBE212CAC6300BC8AC8 /* PokeGame.hpp */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		74A58FD1212CBA1D00BC8AC8 /* PokeEngineTests */ = {
+			isa = PBXGroup;
+			children = (
+				74A58FDB212CBAE200BC8AC8 /* Externals */,
+				74A58FD2212CBA1D00BC8AC8 /* main.cpp */,
+				74A58FDD212CBB2000BC8AC8 /* PokeGameTests.cpp */,
+			);
+			path = PokeEngineTests;
+			sourceTree = "<group>";
+		};
+		74A58FDB212CBAE200BC8AC8 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				74A58FDC212CBAEF00BC8AC8 /* catch.hpp */,
+			);
+			path = Externals;
+			sourceTree = "<group>";
+		};
+		74CBDAF9212B633800F3B732 = {
+			isa = PBXGroup;
+			children = (
+				74CBDB14212B63AE00F3B732 /* PokeEngine */,
+				74CBDB0E212B639F00F3B732 /* PokeEngineDevelopperTool */,
+				74A58FD1212CBA1D00BC8AC8 /* PokeEngineTests */,
+				74CBDB03212B633800F3B732 /* Products */,
+				74CBDB15212B63FF00F3B732 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		74CBDB03212B633800F3B732 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74CBDB02212B633800F3B732 /* libPokeEngine.a */,
+				74CBDB0D212B639F00F3B732 /* PokeEngineDevelopperTool */,
+				74A58FD0212CBA1D00BC8AC8 /* PokeEngineTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74CBDB0E212B639F00F3B732 /* PokeEngineDevelopperTool */ = {
+			isa = PBXGroup;
+			children = (
+				74CBDB0F212B639F00F3B732 /* main.cpp */,
+			);
+			path = PokeEngineDevelopperTool;
+			sourceTree = "<group>";
+		};
+		74CBDB14212B63AE00F3B732 /* PokeEngine */ = {
+			isa = PBXGroup;
+			children = (
+				74A58FC2212CAC6800BC8AC8 /* Game */,
+			);
+			path = PokeEngine;
+			sourceTree = "<group>";
+		};
+		74CBDB15212B63FF00F3B732 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74A58FE1212CBB5C00BC8AC8 /* libPokeEngine.a */,
+				74CBDB19212B64C900F3B732 /* libRPGameEngine.a */,
+				74CBDB16212B63FF00F3B732 /* libRPGameEngine.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		74CBDB00212B633800F3B732 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74A58FC1212CAC6300BC8AC8 /* PokeGame.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		74A58FCF212CBA1D00BC8AC8 /* PokeEngineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74A58FD4212CBA1E00BC8AC8 /* Build configuration list for PBXNativeTarget "PokeEngineTests" */;
+			buildPhases = (
+				74A58FCC212CBA1D00BC8AC8 /* Sources */,
+				74A58FCD212CBA1D00BC8AC8 /* Frameworks */,
+				74A58FCE212CBA1D00BC8AC8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74A58FE0212CBB5000BC8AC8 /* PBXTargetDependency */,
+			);
+			name = PokeEngineTests;
+			productName = PokeEngineTests;
+			productReference = 74A58FD0212CBA1D00BC8AC8 /* PokeEngineTests */;
+			productType = "com.apple.product-type.tool";
+		};
+		74CBDB01212B633800F3B732 /* PokeEngine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74CBDB06212B633800F3B732 /* Build configuration list for PBXNativeTarget "PokeEngine" */;
+			buildPhases = (
+				74CBDAFE212B633800F3B732 /* Sources */,
+				74CBDAFF212B633800F3B732 /* Frameworks */,
+				74CBDB00212B633800F3B732 /* Headers */,
+				74CBDB18212B64A300F3B732 /* Copy products */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PokeEngine;
+			productName = PokeEngine;
+			productReference = 74CBDB02212B633800F3B732 /* libPokeEngine.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		74CBDB0C212B639F00F3B732 /* PokeEngineDevelopperTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74CBDB13212B639F00F3B732 /* Build configuration list for PBXNativeTarget "PokeEngineDevelopperTool" */;
+			buildPhases = (
+				74CBDB09212B639F00F3B732 /* Sources */,
+				74CBDB0A212B639F00F3B732 /* Frameworks */,
+				74CBDB0B212B639F00F3B732 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PokeEngineDevelopperTool;
+			productName = PokeEngineDevelopperTool;
+			productReference = 74CBDB0D212B639F00F3B732 /* PokeEngineDevelopperTool */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74CBDAFA212B633800F3B732 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Renaud Buisine";
+				TargetAttributes = {
+					74A58FCF212CBA1D00BC8AC8 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					74CBDB01212B633800F3B732 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					74CBDB0C212B639F00F3B732 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 74CBDAFD212B633800F3B732 /* Build configuration list for PBXProject "PokeEngine" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 74CBDAF9212B633800F3B732;
+			productRefGroup = 74CBDB03212B633800F3B732 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74CBDB01212B633800F3B732 /* PokeEngine */,
+				74CBDB0C212B639F00F3B732 /* PokeEngineDevelopperTool */,
+				74A58FCF212CBA1D00BC8AC8 /* PokeEngineTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74CBDB18212B64A300F3B732 /* Copy products */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy products";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PRODUCTS_DIR=\"${SRCROOT}/../Products/\"\n\n#Copy lib\ncp ${BUILT_PRODUCTS_DIR}/*.a $PRODUCTS_DIR\ncp -R ${BUILT_PRODUCTS_DIR}/include $PRODUCTS_DIR";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74A58FCC212CBA1D00BC8AC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74A58FDE212CBB2000BC8AC8 /* PokeGameTests.cpp in Sources */,
+				74A58FD3212CBA1E00BC8AC8 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74CBDAFE212B633800F3B732 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74A58FBF212CAC6300BC8AC8 /* PokeGame.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74CBDB09212B639F00F3B732 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74A58FC0212CAC6300BC8AC8 /* PokeGame.cpp in Sources */,
+				74CBDB10212B639F00F3B732 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74A58FE0212CBB5000BC8AC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74CBDB01212B633800F3B732 /* PokeEngine */;
+			targetProxy = 74A58FDF212CBB5000BC8AC8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		74A58FD5212CBA1E00BC8AC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/../Products/**";
+				LIBRARY_SEARCH_PATHS = "${SRCROOT}/../Products/**";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		74A58FD6212CBA1E00BC8AC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/../Products/**";
+				LIBRARY_SEARCH_PATHS = "${SRCROOT}/../Products/**";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		74CBDB04212B633800F3B732 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		74CBDB05212B633800F3B732 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		74CBDB07212B633800F3B732 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/../Products/**";
+				LIBRARY_SEARCH_PATHS = "${SRCROOT}/../Products/**";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				VALID_ARCHS = "i386 x86_64 armv7s armv7 arm64";
+			};
+			name = Debug;
+		};
+		74CBDB08212B633800F3B732 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/../Products/**";
+				LIBRARY_SEARCH_PATHS = "${SRCROOT}/../Products/**";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				VALID_ARCHS = "i386 x86_64 armv7s armv7 arm64";
+			};
+			name = Release;
+		};
+		74CBDB11212B639F00F3B732 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/../Products/**";
+				LIBRARY_SEARCH_PATHS = "${SRCROOT}/../Products/**";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		74CBDB12212B639F00F3B732 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/../Products/**";
+				LIBRARY_SEARCH_PATHS = "${SRCROOT}/../Products/**";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74A58FD4212CBA1E00BC8AC8 /* Build configuration list for PBXNativeTarget "PokeEngineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74A58FD5212CBA1E00BC8AC8 /* Debug */,
+				74A58FD6212CBA1E00BC8AC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74CBDAFD212B633800F3B732 /* Build configuration list for PBXProject "PokeEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74CBDB04212B633800F3B732 /* Debug */,
+				74CBDB05212B633800F3B732 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74CBDB06212B633800F3B732 /* Build configuration list for PBXNativeTarget "PokeEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74CBDB07212B633800F3B732 /* Debug */,
+				74CBDB08212B633800F3B732 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74CBDB13212B639F00F3B732 /* Build configuration list for PBXNativeTarget "PokeEngineDevelopperTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74CBDB11212B639F00F3B732 /* Debug */,
+				74CBDB12212B639F00F3B732 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74CBDAFA212B633800F3B732 /* Project object */;
+}
