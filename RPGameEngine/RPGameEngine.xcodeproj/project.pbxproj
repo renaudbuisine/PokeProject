@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		740FFD3E213449ED00193C58 /* loguru.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 740FFD3D2134461000193C58 /* loguru.hpp */; };
+		7483E425212B76A300B5B44C /* RPGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74CBDAEE212B5EA900F3B732 /* RPGame.cpp */; };
+		7483E426212B76A300B5B44C /* RPGScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74CBDAF4212B5FB300F3B732 /* RPGScene.cpp */; };
+		7483E427212B76A400B5B44C /* RPGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74CBDAEE212B5EA900F3B732 /* RPGame.cpp */; };
+		7483E428212B76A400B5B44C /* RPGScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74CBDAF4212B5FB300F3B732 /* RPGScene.cpp */; };
+		74A58FC3212CADC900BC8AC8 /* RPGDependenciesInjectorImpl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74DC34DD2128CF14004EB83D /* RPGDependenciesInjectorImpl.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		74A9743F212A143F00BCFA8C /* RPGDependenciesInjectorTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74A9743E212A143F00BCFA8C /* RPGDependenciesInjectorTests.cpp */; };
+		74CBDAE0212B11DE00F3B732 /* RPGDependenciesInjectorRetainedDependencyImpl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74DC34DF2129A869004EB83D /* RPGDependenciesInjectorRetainedDependencyImpl.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		74CBDAE1212B11DE00F3B732 /* RPGDependenciesInjectorUnretainedDependencyImpl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74A97437212A120200BCFA8C /* RPGDependenciesInjectorUnretainedDependencyImpl.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		74CBDAE2212B11DE00F3B732 /* RPGDependenciesInjectorInjectedPtrImpl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74DC34E02129A8C9004EB83D /* RPGDependenciesInjectorInjectedPtrImpl.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		74CBDAE9212B170400F3B732 /* libRPGameEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CBDAE8212B170400F3B732 /* libRPGameEngine.a */; };
+		74CBDAEC212B275200F3B732 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74CBDAEA212B275200F3B732 /* main.cpp */; };
+		74CBDAF2212B5EA900F3B732 /* RPGame.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74CBDAEF212B5EA900F3B732 /* RPGame.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		74CBDAF8212B5FB300F3B732 /* RPGScene.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74CBDAF5212B5FB300F3B732 /* RPGScene.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		74DC34CE2127730F004EB83D /* RPGDependenciesInjector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74DC34CC2127730F004EB83D /* RPGDependenciesInjector.cpp */; };
+		74DC34CF2127730F004EB83D /* RPGDependenciesInjector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74DC34CD2127730F004EB83D /* RPGDependenciesInjector.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		74DC34D7212778BC004EB83D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74DC34D6212778BC004EB83D /* main.cpp */; };
+		74DC34DB212778C2004EB83D /* RPGDependenciesInjector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74DC34CC2127730F004EB83D /* RPGDependenciesInjector.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74A97443212A144700BCFA8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74DC34BA21276D98004EB83D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74DC34C121276D98004EB83D;
+			remoteInfo = RPGameEngine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		74A9743A212A143F00BCFA8C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		74DC34D2212778BC004EB83D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		740FFD3D2134461000193C58 /* loguru.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = loguru.hpp; sourceTree = "<group>"; };
+		74A58FD9212CBADC00BC8AC8 /* catch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = catch.hpp; path = ../../../ThirdParties/Cpp/Catch/catch.hpp; sourceTree = "<group>"; };
+		74A97437212A120200BCFA8C /* RPGDependenciesInjectorUnretainedDependencyImpl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGDependenciesInjectorUnretainedDependencyImpl.hpp; sourceTree = "<group>"; };
+		74A9743C212A143F00BCFA8C /* RPGameEngineTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RPGameEngineTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		74A9743E212A143F00BCFA8C /* RPGDependenciesInjectorTests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RPGDependenciesInjectorTests.cpp; sourceTree = "<group>"; };
+		74A97449212A15DE00BCFA8C /* MockDependencies.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MockDependencies.hpp; sourceTree = "<group>"; };
+		74CBDAE8212B170400F3B732 /* libRPGameEngine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRPGameEngine.a; path = ../Products/RPGameEngine/libRPGameEngine.a; sourceTree = "<group>"; };
+		74CBDAEA212B275200F3B732 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		74CBDAEE212B5EA900F3B732 /* RPGame.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RPGame.cpp; sourceTree = "<group>"; };
+		74CBDAEF212B5EA900F3B732 /* RPGame.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGame.hpp; sourceTree = "<group>"; };
+		74CBDAF4212B5FB300F3B732 /* RPGScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RPGScene.cpp; sourceTree = "<group>"; };
+		74CBDAF5212B5FB300F3B732 /* RPGScene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGScene.hpp; sourceTree = "<group>"; };
+		74DC34C221276D98004EB83D /* libRPGameEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRPGameEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		74DC34CC2127730F004EB83D /* RPGDependenciesInjector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RPGDependenciesInjector.cpp; sourceTree = "<group>"; };
+		74DC34CD2127730F004EB83D /* RPGDependenciesInjector.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGDependenciesInjector.hpp; sourceTree = "<group>"; };
+		74DC34D4212778BC004EB83D /* RPGameEngineDeveloperTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RPGameEngineDeveloperTool; sourceTree = BUILT_PRODUCTS_DIR; };
+		74DC34D6212778BC004EB83D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		74DC34DD2128CF14004EB83D /* RPGDependenciesInjectorImpl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGDependenciesInjectorImpl.hpp; sourceTree = "<group>"; };
+		74DC34DF2129A869004EB83D /* RPGDependenciesInjectorRetainedDependencyImpl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGDependenciesInjectorRetainedDependencyImpl.hpp; sourceTree = "<group>"; };
+		74DC34E02129A8C9004EB83D /* RPGDependenciesInjectorInjectedPtrImpl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGDependenciesInjectorInjectedPtrImpl.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74A97439212A143F00BCFA8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74CBDAE9212B170400F3B732 /* libRPGameEngine.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74DC34BF21276D98004EB83D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74DC34D1212778BC004EB83D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		740FFD382134461000193C58 /* ThirdParties */ = {
+			isa = PBXGroup;
+			children = (
+				740FFD392134461000193C58 /* Cpp */,
+			);
+			name = ThirdParties;
+			path = ../../ThirdParties;
+			sourceTree = "<group>";
+		};
+		740FFD392134461000193C58 /* Cpp */ = {
+			isa = PBXGroup;
+			children = (
+				740FFD3C2134461000193C58 /* Loguru */,
+			);
+			path = Cpp;
+			sourceTree = "<group>";
+		};
+		740FFD3C2134461000193C58 /* Loguru */ = {
+			isa = PBXGroup;
+			children = (
+				740FFD3D2134461000193C58 /* loguru.hpp */,
+			);
+			path = Loguru;
+			sourceTree = "<group>";
+		};
+		74A58FD8212CBAC300BC8AC8 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				74A58FD9212CBADC00BC8AC8 /* catch.hpp */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		74A9743D212A143F00BCFA8C /* RPGameEngineTests */ = {
+			isa = PBXGroup;
+			children = (
+				74A58FD8212CBAC300BC8AC8 /* External */,
+				74A97447212A15B100BCFA8C /* Mock */,
+				74CBDAEA212B275200F3B732 /* main.cpp */,
+				74A9743E212A143F00BCFA8C /* RPGDependenciesInjectorTests.cpp */,
+			);
+			path = RPGameEngineTests;
+			sourceTree = "<group>";
+		};
+		74A97447212A15B100BCFA8C /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				74A97449212A15DE00BCFA8C /* MockDependencies.hpp */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		74CBDAE6212B16F300F3B732 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74CBDAE8212B170400F3B732 /* libRPGameEngine.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74CBDAED212B5E8700F3B732 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				74CBDAEE212B5EA900F3B732 /* RPGame.cpp */,
+				74CBDAEF212B5EA900F3B732 /* RPGame.hpp */,
+				74CBDAF4212B5FB300F3B732 /* RPGScene.cpp */,
+				74CBDAF5212B5FB300F3B732 /* RPGScene.hpp */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		74DC34B921276D98004EB83D = {
+			isa = PBXGroup;
+			children = (
+				74DC34C921277239004EB83D /* RPGameEngine */,
+				74DC34D5212778BC004EB83D /* RPGameEngineDeveloperTool */,
+				74A9743D212A143F00BCFA8C /* RPGameEngineTests */,
+				74DC34C321276D98004EB83D /* Products */,
+				74CBDAE6212B16F300F3B732 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		74DC34C321276D98004EB83D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74DC34C221276D98004EB83D /* libRPGameEngine.a */,
+				74DC34D4212778BC004EB83D /* RPGameEngineDeveloperTool */,
+				74A9743C212A143F00BCFA8C /* RPGameEngineTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74DC34C921277239004EB83D /* RPGameEngine */ = {
+			isa = PBXGroup;
+			children = (
+				740FFD382134461000193C58 /* ThirdParties */,
+				74CBDAED212B5E8700F3B732 /* Game */,
+				74DC34CB212772DA004EB83D /* DependenciesInjector */,
+			);
+			path = RPGameEngine;
+			sourceTree = "<group>";
+		};
+		74DC34CB212772DA004EB83D /* DependenciesInjector */ = {
+			isa = PBXGroup;
+			children = (
+				74DC34CC2127730F004EB83D /* RPGDependenciesInjector.cpp */,
+				74DC34CD2127730F004EB83D /* RPGDependenciesInjector.hpp */,
+				74DC34DD2128CF14004EB83D /* RPGDependenciesInjectorImpl.hpp */,
+				74DC34DF2129A869004EB83D /* RPGDependenciesInjectorRetainedDependencyImpl.hpp */,
+				74A97437212A120200BCFA8C /* RPGDependenciesInjectorUnretainedDependencyImpl.hpp */,
+				74DC34E02129A8C9004EB83D /* RPGDependenciesInjectorInjectedPtrImpl.hpp */,
+			);
+			path = DependenciesInjector;
+			sourceTree = "<group>";
+		};
+		74DC34D5212778BC004EB83D /* RPGameEngineDeveloperTool */ = {
+			isa = PBXGroup;
+			children = (
+				74DC34D6212778BC004EB83D /* main.cpp */,
+			);
+			path = RPGameEngineDeveloperTool;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		740FFD4121344BA200193C58 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74DC34C021276D98004EB83D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74CBDAE0212B11DE00F3B732 /* RPGDependenciesInjectorRetainedDependencyImpl.hpp in Headers */,
+				74CBDAE1212B11DE00F3B732 /* RPGDependenciesInjectorUnretainedDependencyImpl.hpp in Headers */,
+				74CBDAE2212B11DE00F3B732 /* RPGDependenciesInjectorInjectedPtrImpl.hpp in Headers */,
+				74CBDAF8212B5FB300F3B732 /* RPGScene.hpp in Headers */,
+				74CBDAF2212B5EA900F3B732 /* RPGame.hpp in Headers */,
+				74DC34CF2127730F004EB83D /* RPGDependenciesInjector.hpp in Headers */,
+				74A58FC3212CADC900BC8AC8 /* RPGDependenciesInjectorImpl.hpp in Headers */,
+				740FFD3E213449ED00193C58 /* loguru.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		74A9743B212A143F00BCFA8C /* RPGameEngineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74A97440212A143F00BCFA8C /* Build configuration list for PBXNativeTarget "RPGameEngineTests" */;
+			buildPhases = (
+				74A97438212A143F00BCFA8C /* Sources */,
+				74A97439212A143F00BCFA8C /* Frameworks */,
+				74A9743A212A143F00BCFA8C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74A97444212A144700BCFA8C /* PBXTargetDependency */,
+			);
+			name = RPGameEngineTests;
+			productName = RPGameEngineTests;
+			productReference = 74A9743C212A143F00BCFA8C /* RPGameEngineTests */;
+			productType = "com.apple.product-type.tool";
+		};
+		74DC34C121276D98004EB83D /* RPGameEngine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74DC34C621276D98004EB83D /* Build configuration list for PBXNativeTarget "RPGameEngine" */;
+			buildPhases = (
+				74DC34BE21276D98004EB83D /* Sources */,
+				74DC34BF21276D98004EB83D /* Frameworks */,
+				74DC34C021276D98004EB83D /* Headers */,
+				74CBDAE5212B150000F3B732 /* Copy products */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RPGameEngine;
+			productName = RPGameEngine;
+			productReference = 74DC34C221276D98004EB83D /* libRPGameEngine.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		74DC34D3212778BC004EB83D /* RPGameEngineDeveloperTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74DC34D8212778BC004EB83D /* Build configuration list for PBXNativeTarget "RPGameEngineDeveloperTool" */;
+			buildPhases = (
+				74DC34D0212778BC004EB83D /* Sources */,
+				74DC34D1212778BC004EB83D /* Frameworks */,
+				74DC34D2212778BC004EB83D /* CopyFiles */,
+				740FFD4121344BA200193C58 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RPGameEngineDeveloperTool;
+			productName = RPGameEngineDeveloperTool;
+			productReference = 74DC34D4212778BC004EB83D /* RPGameEngineDeveloperTool */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74DC34BA21276D98004EB83D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RPG;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Renaud Buisine";
+				TargetAttributes = {
+					74A9743B212A143F00BCFA8C = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					74DC34C121276D98004EB83D = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					74DC34D3212778BC004EB83D = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 74DC34BD21276D98004EB83D /* Build configuration list for PBXProject "RPGameEngine" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 74DC34B921276D98004EB83D;
+			productRefGroup = 74DC34C321276D98004EB83D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74DC34C121276D98004EB83D /* RPGameEngine */,
+				74DC34D3212778BC004EB83D /* RPGameEngineDeveloperTool */,
+				74A9743B212A143F00BCFA8C /* RPGameEngineTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74CBDAE5212B150000F3B732 /* Copy products */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy products";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PRODUCTS_DIR=\"${SRCROOT}/../Products/\"\n\n#Copy lib\ncp ${BUILT_PRODUCTS_DIR}/*.a $PRODUCTS_DIR\ncp -R ${BUILT_PRODUCTS_DIR}/include $PRODUCTS_DIR";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74A97438212A143F00BCFA8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74CBDAEC212B275200F3B732 /* main.cpp in Sources */,
+				74A9743F212A143F00BCFA8C /* RPGDependenciesInjectorTests.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74DC34BE21276D98004EB83D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74DC34CE2127730F004EB83D /* RPGDependenciesInjector.cpp in Sources */,
+				7483E427212B76A400B5B44C /* RPGame.cpp in Sources */,
+				7483E428212B76A400B5B44C /* RPGScene.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74DC34D0212778BC004EB83D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7483E426212B76A300B5B44C /* RPGScene.cpp in Sources */,
+				74DC34DB212778C2004EB83D /* RPGDependenciesInjector.cpp in Sources */,
+				74DC34D7212778BC004EB83D /* main.cpp in Sources */,
+				7483E425212B76A300B5B44C /* RPGame.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74A97444212A144700BCFA8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74DC34C121276D98004EB83D /* RPGameEngine */;
+			targetProxy = 74A97443212A144700BCFA8C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		74A97441212A143F00BCFA8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/../Products/**";
+				LIBRARY_SEARCH_PATHS = "${SRCROOT}/../Products/**";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		74A97442212A143F00BCFA8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/../Products/**";
+				LIBRARY_SEARCH_PATHS = "${SRCROOT}/../Products/**";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		74DC34C421276D98004EB83D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		74DC34C521276D98004EB83D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		74DC34C721276D98004EB83D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_PREFIX = lib;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				VALID_ARCHS = "i386 x86_64 armv7s armv7 arm64";
+			};
+			name = Debug;
+		};
+		74DC34C821276D98004EB83D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_PREFIX = lib;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				VALID_ARCHS = "i386 x86_64 armv7s armv7 arm64";
+			};
+			name = Release;
+		};
+		74DC34D9212778BC004EB83D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		74DC34DA212778BC004EB83D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74A97440212A143F00BCFA8C /* Build configuration list for PBXNativeTarget "RPGameEngineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74A97441212A143F00BCFA8C /* Debug */,
+				74A97442212A143F00BCFA8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74DC34BD21276D98004EB83D /* Build configuration list for PBXProject "RPGameEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74DC34C421276D98004EB83D /* Debug */,
+				74DC34C521276D98004EB83D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74DC34C621276D98004EB83D /* Build configuration list for PBXNativeTarget "RPGameEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74DC34C721276D98004EB83D /* Debug */,
+				74DC34C821276D98004EB83D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74DC34D8212778BC004EB83D /* Build configuration list for PBXNativeTarget "RPGameEngineDeveloperTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74DC34D9212778BC004EB83D /* Debug */,
+				74DC34DA212778BC004EB83D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74DC34BA21276D98004EB83D /* Project object */;
+}
