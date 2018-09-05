@@ -16,15 +16,14 @@
 class rpg_dependenciesInjector {
 public:
     class injector;
-    class dependency;
     
     //Public class injector
     class injector {
     public:
         friend class rpg_dependenciesInjector;
         
-        //public class injectedPtr
-        template<typename T = dependency>
+        //public class unretainedDependency
+        template<typename T>
         class injectedPtr {
         public:
             friend class rpg_dependenciesInjector;
@@ -56,9 +55,50 @@ public:
         ~injector(void) noexcept;
         
         //injector / Public functions
-        template<typename T = dependency>
-        injectedPtr<T> getDependency();
+        template<typename T>
+        injectedPtr<T> getDependency() noexcept;
     private:
+        //private class dependency
+        struct dependency {
+            friend class rpg_dependenciesInjector;
+            virtual ~dependency(void) noexcept = default;
+            
+            virtual void *getInstance(void) const { return NULL; }
+            virtual void *callFactory(injector&) const { return NULL; }
+            virtual bool shouldRetain(void) const { return false; }
+        };
+        
+        //private class unretainedDependency
+        template<typename T>
+        class unretainedDependency: dependency {
+        public:
+            friend class rpg_dependenciesInjector;
+            //unretainedDependency / public constructor/desctructor
+            unretainedDependency(T *(*)(injector&), bool) noexcept;
+            ~unretainedDependency(void) noexcept = default;
+            
+            void *callFactory(injector&) const override final;
+            bool shouldRetain(void) const override final;
+        private:
+            //dependency / Private attributes
+            T *(*m_factory)(injector&);
+            bool m_shouldRetain;
+        };
+        
+        //Private class dependency
+        template<typename T>
+        class retainedDependency: dependency {
+        public:
+            friend class rpg_dependenciesInjector;
+            //retainedDependency / public constructor/desctructor
+            retainedDependency(T *inst) noexcept;
+            ~retainedDependency(void) noexcept;
+            
+            void * getInstance(void) const override final;
+        private:
+            //retainedDependency / Private attributes
+            T *m_inst;
+        };
         
         //injector / Private constructor/desctructor
         injector(void) noexcept;
@@ -70,21 +110,13 @@ public:
         std::unordered_map<std::type_index,dependency *> m_dependencies;
     };
     
-    //public class dependency
-    class dependency {
-        friend class rpg_dependenciesInjector::injector;
-    protected:
-        dependency(injector&);
-        virtual ~dependency(void) = default;
-    };
-    
     // Public constructor/desctructor
     rpg_dependenciesInjector(void) noexcept;
     ~rpg_dependenciesInjector(void) noexcept;
     
     //Public function
-    template<typename T = dependency>
-    void registerDependency() noexcept;
+    template<typename T>
+    void registerDependency(T *(*)(rpg_dependenciesInjector::injector&), bool = false) noexcept;
     void clear(void) noexcept;
     
     // GETTERs
@@ -97,6 +129,8 @@ private:
 };
 
 #include "RPGDependenciesInjectorImpl.hpp"
+#include "RPGDependenciesInjectorRetainedDependencyImpl.hpp"
+#include "RPGDependenciesInjectorUnretainedDependencyImpl.hpp"
 #include "RPGDependenciesInjectorInjectedPtrImpl.hpp"
 
 #endif /* RPGDependenciesInjector_hpp */

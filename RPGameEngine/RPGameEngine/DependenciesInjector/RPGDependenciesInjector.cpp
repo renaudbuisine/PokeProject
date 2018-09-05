@@ -18,8 +18,6 @@ rpg_dependenciesInjector::injector::~injector(void) noexcept {
     clear();
 }
 
-rpg_dependenciesInjector::dependency::dependency(rpg_dependenciesInjector::injector& injector) { }
-
 // FUNCTION
 
 void rpg_dependenciesInjector::clear(void) noexcept {
@@ -28,9 +26,7 @@ void rpg_dependenciesInjector::clear(void) noexcept {
 
 void rpg_dependenciesInjector::injector::clear(void) noexcept {
     for (auto dependencyPair: m_dependencies) {
-        if (dependencyPair.second) {
-            delete dependencyPair.second;
-        }
+        delete dependencyPair.second;
     }
     m_dependencies.clear();
 }
