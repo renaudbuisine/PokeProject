@@ -14,8 +14,8 @@
 SCENARIO ("Register/ Clear dependencies", "[dependenciesInjector::registerDependency|clear|size]") {
     GIVEN ("A dependencies injector RPGDependenciesInjector") {
         rpg_dependenciesInjector dependenciesInjector;
-        WHEN ("Registering class A as unretained dependency") {
-            dependenciesInjector.registerDependency<A>(A::create);
+        WHEN ("Registering class A") {
+            dependenciesInjector.registerDependency<A>();
 
             THEN ("One dependency is registered") {
                 REQUIRE (dependenciesInjector.size() == 1);
@@ -26,7 +26,7 @@ SCENARIO ("Register/ Clear dependencies", "[dependenciesInjector::registerDepend
         }
         
         WHEN ("Registering other class B as dependency with sub dependencies") {
-            dependenciesInjector.registerDependency<B>(B::create, true);
+            dependenciesInjector.registerDependency<B>();
 
             THEN ("One dependency is registered") {
                 REQUIRE (dependenciesInjector.size() == 1);
@@ -36,21 +36,10 @@ SCENARIO ("Register/ Clear dependencies", "[dependenciesInjector::registerDepend
             }
         }
         
-        WHEN ("Registering other class C as retained dependency") {
-            dependenciesInjector.registerDependency<C>(C::create, true);
-            
-            THEN ("One dependency is registered") {
-                REQUIRE (dependenciesInjector.size() == 1);
-            }
-            THEN ("No instances are created yet") {
-                REQUIRE (instCount == 0);
-            }
-        }
-        
         WHEN ("Registering several dependencies") {
-            dependenciesInjector.registerDependency<A>(A::create);
-            dependenciesInjector.registerDependency<B>(B::create);
-            dependenciesInjector.registerDependency<C>(C::create, true);
+            dependenciesInjector.registerDependency<A>();
+            dependenciesInjector.registerDependency<B>();
+            dependenciesInjector.registerDependency<C>();
             
             THEN ("3 dependencies are registered") {
                 REQUIRE (dependenciesInjector.size() == 3);
@@ -58,9 +47,9 @@ SCENARIO ("Register/ Clear dependencies", "[dependenciesInjector::registerDepend
         }
         
         WHEN ("Registering dependencies then clearing all") {
-            dependenciesInjector.registerDependency<A>(A::create);
-            dependenciesInjector.registerDependency<B>(B::create);
-            dependenciesInjector.registerDependency<C>(C::create, true);
+            dependenciesInjector.registerDependency<A>();
+            dependenciesInjector.registerDependency<B>();
+            dependenciesInjector.registerDependency<C>();
             
             dependenciesInjector.clear();
             THEN ("No registered dependency") {
@@ -71,11 +60,9 @@ SCENARIO ("Register/ Clear dependencies", "[dependenciesInjector::registerDepend
 }
 
 SCENARIO ("Retrieved unretained dependencies", "[dependenciesInjector::injector::getDependency]") {
-    GIVEN ("A dependencies injector RPGDependenciesInjector with A, B, C as registered dependencies") {
+    GIVEN ("A dependencies injector RPGDependenciesInjector with A, B, C as dependencies, C is retained") {
         rpg_dependenciesInjector dependenciesInjector;
-        dependenciesInjector.registerDependency<A>(A::create);
-        dependenciesInjector.registerDependency<B>(B::create);
-        dependenciesInjector.registerDependency<C>(C::create, true);
+        dependenciesInjector.registerDependency<C>();
 
         auto injector = dependenciesInjector.getInjector();
 
@@ -167,14 +154,6 @@ SCENARIO ("Retrieved unretained dependencies", "[dependenciesInjector::injector:
             dependenciesInjector.clear();
             THEN ("all instances has been deleted") {
                 REQUIRE (instCount == 0);
-            }
-        }
-        
-        WHEN("Getting dependency which has not been registered") {
-            auto dependency = injector->getDependency<int>();
-            
-            THEN ("There are no dependency") {
-                REQUIRE (dependency == NULL);
             }
         }
     }

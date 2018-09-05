@@ -15,11 +15,7 @@ class rpg_scene {
 public:
     friend class rpg_game;
     
-    struct delegate {
-    };
-    
-    //Constructor/destructor
-    rpg_scene(rpg_dependenciesInjector::injector& injector) noexcept;
+    //Destructor
     virtual ~rpg_scene(void) noexcept = default;
     
     //Life cycle
@@ -36,14 +32,9 @@ public:
      */
     virtual void fixedUpdate(void) noexcept;
     
-    /**
-     Set delegate object
-
-     @param delegate delegate object
-     */
-    void setDelegate(const std::shared_ptr<delegate>& delegate);
-private:
-    std::weak_ptr<delegate> m_delegate;
+protected:
+    //Constructor
+    rpg_scene(rpg_dependenciesInjector::injector& injector) noexcept;
 };
 
 #endif /* RPGScene_hpp */

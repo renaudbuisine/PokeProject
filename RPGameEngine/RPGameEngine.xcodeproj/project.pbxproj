@@ -14,8 +14,6 @@
 		7483E428212B76A400B5B44C /* RPGScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74CBDAF4212B5FB300F3B732 /* RPGScene.cpp */; };
 		74A58FC3212CADC900BC8AC8 /* RPGDependenciesInjectorImpl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74DC34DD2128CF14004EB83D /* RPGDependenciesInjectorImpl.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		74A9743F212A143F00BCFA8C /* RPGDependenciesInjectorTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74A9743E212A143F00BCFA8C /* RPGDependenciesInjectorTests.cpp */; };
-		74CBDAE0212B11DE00F3B732 /* RPGDependenciesInjectorRetainedDependencyImpl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74DC34DF2129A869004EB83D /* RPGDependenciesInjectorRetainedDependencyImpl.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
-		74CBDAE1212B11DE00F3B732 /* RPGDependenciesInjectorUnretainedDependencyImpl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74A97437212A120200BCFA8C /* RPGDependenciesInjectorUnretainedDependencyImpl.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		74CBDAE2212B11DE00F3B732 /* RPGDependenciesInjectorInjectedPtrImpl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74DC34E02129A8C9004EB83D /* RPGDependenciesInjectorInjectedPtrImpl.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		74CBDAE9212B170400F3B732 /* libRPGameEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CBDAE8212B170400F3B732 /* libRPGameEngine.a */; };
 		74CBDAEC212B275200F3B732 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74CBDAEA212B275200F3B732 /* main.cpp */; };
@@ -61,7 +59,6 @@
 /* Begin PBXFileReference section */
 		740FFD3D2134461000193C58 /* loguru.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = loguru.hpp; sourceTree = "<group>"; };
 		74A58FD9212CBADC00BC8AC8 /* catch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = catch.hpp; path = ../../../ThirdParties/Cpp/Catch/catch.hpp; sourceTree = "<group>"; };
-		74A97437212A120200BCFA8C /* RPGDependenciesInjectorUnretainedDependencyImpl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGDependenciesInjectorUnretainedDependencyImpl.hpp; sourceTree = "<group>"; };
 		74A9743C212A143F00BCFA8C /* RPGameEngineTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RPGameEngineTests; sourceTree = BUILT_PRODUCTS_DIR; };
 		74A9743E212A143F00BCFA8C /* RPGDependenciesInjectorTests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RPGDependenciesInjectorTests.cpp; sourceTree = "<group>"; };
 		74A97449212A15DE00BCFA8C /* MockDependencies.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MockDependencies.hpp; sourceTree = "<group>"; };
@@ -77,7 +74,6 @@
 		74DC34D4212778BC004EB83D /* RPGameEngineDeveloperTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RPGameEngineDeveloperTool; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DC34D6212778BC004EB83D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		74DC34DD2128CF14004EB83D /* RPGDependenciesInjectorImpl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGDependenciesInjectorImpl.hpp; sourceTree = "<group>"; };
-		74DC34DF2129A869004EB83D /* RPGDependenciesInjectorRetainedDependencyImpl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGDependenciesInjectorRetainedDependencyImpl.hpp; sourceTree = "<group>"; };
 		74DC34E02129A8C9004EB83D /* RPGDependenciesInjectorInjectedPtrImpl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGDependenciesInjectorInjectedPtrImpl.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,8 +211,6 @@
 				74DC34CC2127730F004EB83D /* RPGDependenciesInjector.cpp */,
 				74DC34CD2127730F004EB83D /* RPGDependenciesInjector.hpp */,
 				74DC34DD2128CF14004EB83D /* RPGDependenciesInjectorImpl.hpp */,
-				74DC34DF2129A869004EB83D /* RPGDependenciesInjectorRetainedDependencyImpl.hpp */,
-				74A97437212A120200BCFA8C /* RPGDependenciesInjectorUnretainedDependencyImpl.hpp */,
 				74DC34E02129A8C9004EB83D /* RPGDependenciesInjectorInjectedPtrImpl.hpp */,
 			);
 			path = DependenciesInjector;
@@ -244,8 +238,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74CBDAE0212B11DE00F3B732 /* RPGDependenciesInjectorRetainedDependencyImpl.hpp in Headers */,
-				74CBDAE1212B11DE00F3B732 /* RPGDependenciesInjectorUnretainedDependencyImpl.hpp in Headers */,
 				74CBDAE2212B11DE00F3B732 /* RPGDependenciesInjectorInjectedPtrImpl.hpp in Headers */,
 				74CBDAF8212B5FB300F3B732 /* RPGScene.hpp in Headers */,
 				74CBDAF2212B5EA900F3B732 /* RPGame.hpp in Headers */,

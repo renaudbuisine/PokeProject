@@ -1,0 +1,4 @@
+module MixModuleFrameworkPrivate {
+//  header "TestCode-Private.h"
+  export *
+}

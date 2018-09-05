@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:PokemonHunter/PokemonHunter.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:PokeEngine_iOS/PokeEngine_iOS.xcodeproj">
    </FileRef>
    <FileRef

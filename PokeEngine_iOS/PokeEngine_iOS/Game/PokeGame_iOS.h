@@ -8,10 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-#import <PokeEngine/PokeGame.hpp>
+#import "PokeGameDelegate.h"
 
 @interface PokeGame_iOS : NSObject
 
--(instancetype) initWithName:(NSString *)name;
+@property (nonatomic, weak) id<PokeGameDelegate> delegate;
+
+- (instancetype)initWithName:(NSString *)name;
+
+// Life cycle
+- (void)run;
+- (void)pause;
+- (void)resume;
+- (void)stop;
 
 @end

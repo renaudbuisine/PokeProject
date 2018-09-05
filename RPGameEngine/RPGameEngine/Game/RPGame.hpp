@@ -22,13 +22,12 @@
 
 class rpg_game {
 public:
+    //TYPEALIAS
+    using updateCallBack = std::function<void(const float)>;
+    using fixedUpdateCallBack = std::function<void(void)>;
     
-    struct delegate {
-
-    };
-    
+    // CONTRUCTOR/DESTRUCTOR
     rpg_game(const std::string&) noexcept;
-    rpg_game(const std::shared_ptr<delegate>& delegate) noexcept;
     virtual ~rpg_game(void) noexcept;
     
     /**
@@ -37,18 +36,6 @@ public:
      @return Description of obj
      */
     virtual std::string toString(void) const noexcept;
-    
-    /**
-     Load game object
-     (needs override)
-     */
-    virtual void load(void) noexcept;
-    
-    /**
-     Unload game object
-     (needs override)
-     */
-    virtual void unload(void) noexcept;
     
     /**
      Launch loop
@@ -76,24 +63,21 @@ public:
      
      @param elapsedTimestamp elapsed time stamp (in seconds)
      */
-    virtual void update(const float elapsedTimestamp) noexcept;
+    virtual void update(const float elapsedTimestamp);
     /**
      called 30 times a second
      (needs override)
      */
-    virtual void fixedUpdate(void) noexcept;
+    virtual void fixedUpdate(void);
     
-    /**
-     Set delegate object
-     
-     @param delegate delegate object
-     */
-    void setDelegate(const std::shared_ptr<delegate>& delegate);
+    //GETTER SETTER
+    void setUpdateCallback(updateCallBack callback) noexcept;
+    void setFixedUpdateCallback(fixedUpdateCallBack callback) noexcept;
     
 protected:
     
     template<typename T>
-    void registerDependency(T *(*)(rpg_dependenciesInjector::injector&), bool = false);
+    void registerDependency();
     
 private:
     
@@ -106,7 +90,9 @@ private:
     rpg_dependenciesInjector m_dependenciesInjector;
     std::stack<std::unique_ptr<rpg_scene>> m_scenes;
     
-    std::weak_ptr<delegate> m_delegate;
+    //CALLBACKS
+    updateCallBack m_updateCallBack;
+    fixedUpdateCallBack m_fixedUpdateCallback;
     
     //STATUS
     bool m_isRunning;
