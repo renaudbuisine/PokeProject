@@ -1,6 +1,6 @@
 //
-//  PokeEngine_iOSTests.swift
-//  PokeEngine_iOSTests
+//  PokeGameTests.swift
+//  PokeGameTests
 //
 //  Created by Renaud Buisine on 22/08/2018.
 //  Copyright © 2018 Renaud Buisine. All rights reserved.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import PokeEngine_iOS
 
-class PokeEngine_iOSTests: XCTestCase {
+class PokeGameTests: XCTestCase {
     
     private var game: PokeGame_iOS!
     private var gameDelegate: MockPokeGameDelegate!

@@ -56,6 +56,11 @@ public:
      */
     void stop(void) noexcept;
     
+    /**
+     Load initial components of game
+     */
+    virtual void load(void) noexcept = 0;
+    
     //Updates
     /**
      called a each loop whatever elapsedtimestamp value
@@ -70,6 +75,17 @@ public:
      */
     virtual void fixedUpdate(void);
     
+    //SCENES
+    template<typename T = rpg_scene>
+    std::shared_ptr<T> createScene(void) noexcept;
+    
+    /**
+     Add new scene to tht stacj
+
+     @param scenePtr Pointer to new scene
+     */
+    void addScene(const std::shared_ptr<rpg_scene>& scenePtr) noexcept;
+    
     //GETTER SETTER
     void setUpdateCallback(updateCallBack callback) noexcept;
     void setFixedUpdateCallback(fixedUpdateCallBack callback) noexcept;
@@ -77,7 +93,7 @@ public:
 protected:
     
     template<typename T>
-    void registerDependency();
+    void registerDependency(T *(*factory)(rpg_dependenciesInjector::injector&), bool = false) noexcept;
     
 private:
     
@@ -88,7 +104,7 @@ private:
     
     //Attributes
     rpg_dependenciesInjector m_dependenciesInjector;
-    std::stack<std::unique_ptr<rpg_scene>> m_scenes;
+    std::stack<std::shared_ptr<rpg_scene>> m_scenes;
     
     //CALLBACKS
     updateCallBack m_updateCallBack;
@@ -104,5 +120,7 @@ private:
     //TIMESTAMP
     float m_runningTimestamp;
 };
+
+#include "RPGGameImpl.hpp"
 
 #endif /* RPGame_hpp */

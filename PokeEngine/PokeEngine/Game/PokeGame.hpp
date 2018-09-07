@@ -12,9 +12,15 @@
 #include <stdio.h>
 #include <RPGameEngine/RPGame.hpp>
 
-class poke_game: public rpg_game {
+class poke_game final: public rpg_game {
 public:
     poke_game(std::string name) noexcept;
+    
+    void load(void) noexcept;
+    
+private:
+    void loadDependencies(void) noexcept;
+    void loadRootScene(void) noexcept;
 };
 
 #endif /* PokeGame_hpp */

@@ -1,24 +1,26 @@
 //
-//  PokeGame_iOS.m
+//  PokeGame.m
 //  PokeEngine_iOS
 //
 //  Created by Renaud Buisine on 22/08/2018.
 //  Copyright © 2018 Renaud Buisine. All rights reserved.
 //
 
-#import "PokeGame_iOS.h"
+#import "PokeGame.h"
 
 #import "NSString+cpp.h"
 
 #include <PokeEngine/PokeGame.hpp>
 
-@interface PokeGame_iOS() {
-    poke_game *_game; // CHECK ARC !!!!
+@interface PokeGame() {
+    poke_game *_game;
+    
+    Ajouter un router possede par la scene, scene creees par le game
 }
 
 @end
 
-@implementation PokeGame_iOS
+@implementation PokeGame
 
 - (instancetype)initWithName:(NSString *)name {
     self = [super init];
@@ -40,7 +42,7 @@
 - (void)setDelegate:(id<PokeGameDelegate>)delegate {
     _delegate = delegate;
     
-    __weak PokeGame_iOS *weakSelf = self;
+    __weak PokeGame *weakSelf = self;
     
     if ([_delegate respondsToSelector:@selector(didUpdateWithElapsedTimestamp:)]) {
         _game->setUpdateCallback(^(const float elapsedTimestamp){

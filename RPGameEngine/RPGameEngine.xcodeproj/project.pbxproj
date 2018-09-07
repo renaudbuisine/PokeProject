@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		740FFD3E213449ED00193C58 /* loguru.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 740FFD3D2134461000193C58 /* loguru.hpp */; };
 		7483E425212B76A300B5B44C /* RPGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74CBDAEE212B5EA900F3B732 /* RPGame.cpp */; };
-		7483E426212B76A300B5B44C /* RPGScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74CBDAF4212B5FB300F3B732 /* RPGScene.cpp */; };
 		7483E427212B76A400B5B44C /* RPGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74CBDAEE212B5EA900F3B732 /* RPGame.cpp */; };
-		7483E428212B76A400B5B44C /* RPGScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74CBDAF4212B5FB300F3B732 /* RPGScene.cpp */; };
 		74A58FC3212CADC900BC8AC8 /* RPGDependenciesInjectorImpl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74DC34DD2128CF14004EB83D /* RPGDependenciesInjectorImpl.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		74A9743F212A143F00BCFA8C /* RPGDependenciesInjectorTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74A9743E212A143F00BCFA8C /* RPGDependenciesInjectorTests.cpp */; };
 		74CBDAE2212B11DE00F3B732 /* RPGDependenciesInjectorInjectedPtrImpl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74DC34E02129A8C9004EB83D /* RPGDependenciesInjectorInjectedPtrImpl.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +21,29 @@
 		74DC34CF2127730F004EB83D /* RPGDependenciesInjector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74DC34CD2127730F004EB83D /* RPGDependenciesInjector.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		74DC34D7212778BC004EB83D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74DC34D6212778BC004EB83D /* main.cpp */; };
 		74DC34DB212778C2004EB83D /* RPGDependenciesInjector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74DC34CC2127730F004EB83D /* RPGDependenciesInjector.cpp */; };
+		74FC1948214031D700DEF6F5 /* RPGAbstractMapScene.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74FC1947214031D700DEF6F5 /* RPGAbstractMapScene.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		74FC194C214032C700DEF6F5 /* RPGDefaultMapScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74FC194A214032C700DEF6F5 /* RPGDefaultMapScene.cpp */; };
+		74FC194D214032C700DEF6F5 /* RPGDefaultMapScene.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74FC194B214032C700DEF6F5 /* RPGDefaultMapScene.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		74FC19502140381900DEF6F5 /* RPGControl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74FC194F2140381900DEF6F5 /* RPGControl.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		74FC195721403C8B00DEF6F5 /* RPGAbstractCrossControl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74FC195621403C8B00DEF6F5 /* RPGAbstractCrossControl.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		74FC195A21403CCF00DEF6F5 /* RPGDefaultCrossControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74FC195821403CCF00DEF6F5 /* RPGDefaultCrossControl.cpp */; };
+		74FC195B21403CCF00DEF6F5 /* RPGDefaultCrossControl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74FC195921403CCF00DEF6F5 /* RPGDefaultCrossControl.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		74FC196221411D7C00DEF6F5 /* RPGCharacter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74FC196021411D7C00DEF6F5 /* RPGCharacter.cpp */; };
+		74FC196321411D7C00DEF6F5 /* RPGCharacter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74FC196121411D7C00DEF6F5 /* RPGCharacter.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		74FC196821411E5A00DEF6F5 /* RPGPoint.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74FC196621411E5A00DEF6F5 /* RPGPoint.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		74FC196A21411EC600DEF6F5 /* RPGPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74FC196921411EC600DEF6F5 /* RPGPoint.cpp */; };
+		74FC196E2141349800DEF6F5 /* RPGObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74FC196C2141349800DEF6F5 /* RPGObject.cpp */; };
+		74FC196F2141349800DEF6F5 /* RPGObject.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74FC196D2141349800DEF6F5 /* RPGObject.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		74FC197221413F6400DEF6F5 /* RPGPlayerCharacter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74FC197021413F6400DEF6F5 /* RPGPlayerCharacter.cpp */; };
+		74FC197321413F6400DEF6F5 /* RPGPlayerCharacter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74FC197121413F6400DEF6F5 /* RPGPlayerCharacter.hpp */; };
+		74FC19762142D75A00DEF6F5 /* RPGMapSceneTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74FC195C2140444E00DEF6F5 /* RPGMapSceneTests.cpp */; };
+		74FC197A2142ED8500DEF6F5 /* RPGScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74FC19792142ED8500DEF6F5 /* RPGScene.cpp */; };
+		74FC197B2142ED8500DEF6F5 /* RPGScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74FC19792142ED8500DEF6F5 /* RPGScene.cpp */; };
+		74FC19832143162D00DEF6F5 /* RPGGameImpl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74FC19822143162D00DEF6F5 /* RPGGameImpl.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		74FC1987214317EA00DEF6F5 /* RPGRouter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74FC1985214317EA00DEF6F5 /* RPGRouter.cpp */; };
+		74FC1988214317EA00DEF6F5 /* RPGRouter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74FC1985214317EA00DEF6F5 /* RPGRouter.cpp */; };
+		74FC1989214317EA00DEF6F5 /* RPGRouter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74FC1986214317EA00DEF6F5 /* RPGRouter.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		74FC198A214317EA00DEF6F5 /* RPGRouter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74FC1986214317EA00DEF6F5 /* RPGRouter.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +87,6 @@
 		74CBDAEA212B275200F3B732 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		74CBDAEE212B5EA900F3B732 /* RPGame.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RPGame.cpp; sourceTree = "<group>"; };
 		74CBDAEF212B5EA900F3B732 /* RPGame.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGame.hpp; sourceTree = "<group>"; };
-		74CBDAF4212B5FB300F3B732 /* RPGScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RPGScene.cpp; sourceTree = "<group>"; };
 		74CBDAF5212B5FB300F3B732 /* RPGScene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGScene.hpp; sourceTree = "<group>"; };
 		74DC34C221276D98004EB83D /* libRPGameEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRPGameEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DC34CC2127730F004EB83D /* RPGDependenciesInjector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RPGDependenciesInjector.cpp; sourceTree = "<group>"; };
@@ -75,6 +95,26 @@
 		74DC34D6212778BC004EB83D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		74DC34DD2128CF14004EB83D /* RPGDependenciesInjectorImpl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGDependenciesInjectorImpl.hpp; sourceTree = "<group>"; };
 		74DC34E02129A8C9004EB83D /* RPGDependenciesInjectorInjectedPtrImpl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGDependenciesInjectorInjectedPtrImpl.hpp; sourceTree = "<group>"; };
+		74FC1947214031D700DEF6F5 /* RPGAbstractMapScene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGAbstractMapScene.hpp; sourceTree = "<group>"; };
+		74FC194A214032C700DEF6F5 /* RPGDefaultMapScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RPGDefaultMapScene.cpp; sourceTree = "<group>"; };
+		74FC194B214032C700DEF6F5 /* RPGDefaultMapScene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGDefaultMapScene.hpp; sourceTree = "<group>"; };
+		74FC194F2140381900DEF6F5 /* RPGControl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGControl.hpp; sourceTree = "<group>"; };
+		74FC195621403C8B00DEF6F5 /* RPGAbstractCrossControl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGAbstractCrossControl.hpp; sourceTree = "<group>"; };
+		74FC195821403CCF00DEF6F5 /* RPGDefaultCrossControl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RPGDefaultCrossControl.cpp; sourceTree = "<group>"; };
+		74FC195921403CCF00DEF6F5 /* RPGDefaultCrossControl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGDefaultCrossControl.hpp; sourceTree = "<group>"; };
+		74FC195C2140444E00DEF6F5 /* RPGMapSceneTests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RPGMapSceneTests.cpp; sourceTree = "<group>"; };
+		74FC196021411D7C00DEF6F5 /* RPGCharacter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RPGCharacter.cpp; sourceTree = "<group>"; };
+		74FC196121411D7C00DEF6F5 /* RPGCharacter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGCharacter.hpp; sourceTree = "<group>"; };
+		74FC196621411E5A00DEF6F5 /* RPGPoint.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGPoint.hpp; sourceTree = "<group>"; };
+		74FC196921411EC600DEF6F5 /* RPGPoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RPGPoint.cpp; sourceTree = "<group>"; };
+		74FC196C2141349800DEF6F5 /* RPGObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RPGObject.cpp; sourceTree = "<group>"; };
+		74FC196D2141349800DEF6F5 /* RPGObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGObject.hpp; sourceTree = "<group>"; };
+		74FC197021413F6400DEF6F5 /* RPGPlayerCharacter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RPGPlayerCharacter.cpp; sourceTree = "<group>"; };
+		74FC197121413F6400DEF6F5 /* RPGPlayerCharacter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGPlayerCharacter.hpp; sourceTree = "<group>"; };
+		74FC19792142ED8500DEF6F5 /* RPGScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RPGScene.cpp; path = ../../../../../../.Trash/RPGScene.cpp; sourceTree = "<group>"; };
+		74FC19822143162D00DEF6F5 /* RPGGameImpl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGGameImpl.hpp; sourceTree = "<group>"; };
+		74FC1985214317EA00DEF6F5 /* RPGRouter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RPGRouter.cpp; sourceTree = "<group>"; };
+		74FC1986214317EA00DEF6F5 /* RPGRouter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RPGRouter.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +182,7 @@
 				74A58FD8212CBAC300BC8AC8 /* External */,
 				74A97447212A15B100BCFA8C /* Mock */,
 				74CBDAEA212B275200F3B732 /* main.cpp */,
+				74FC195C2140444E00DEF6F5 /* RPGMapSceneTests.cpp */,
 				74A9743E212A143F00BCFA8C /* RPGDependenciesInjectorTests.cpp */,
 			);
 			path = RPGameEngineTests;
@@ -168,8 +209,7 @@
 			children = (
 				74CBDAEE212B5EA900F3B732 /* RPGame.cpp */,
 				74CBDAEF212B5EA900F3B732 /* RPGame.hpp */,
-				74CBDAF4212B5FB300F3B732 /* RPGScene.cpp */,
-				74CBDAF5212B5FB300F3B732 /* RPGScene.hpp */,
+				74FC19822143162D00DEF6F5 /* RPGGameImpl.hpp */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -198,9 +238,14 @@
 		74DC34C921277239004EB83D /* RPGameEngine */ = {
 			isa = PBXGroup;
 			children = (
-				740FFD382134461000193C58 /* ThirdParties */,
-				74CBDAED212B5E8700F3B732 /* Game */,
+				74FC194E214035B100DEF6F5 /* Controls */,
 				74DC34CB212772DA004EB83D /* DependenciesInjector */,
+				74CBDAED212B5E8700F3B732 /* Game */,
+				74FC1984214317CE00DEF6F5 /* Routers */,
+				74FC19452140318700DEF6F5 /* Scenes */,
+				74FC195E21411D2E00DEF6F5 /* Models */,
+				740FFD382134461000193C58 /* ThirdParties */,
+				74FC196421411E2B00DEF6F5 /* Utils */,
 			);
 			path = RPGameEngine;
 			sourceTree = "<group>";
@@ -224,6 +269,92 @@
 			path = RPGameEngineDeveloperTool;
 			sourceTree = "<group>";
 		};
+		74FC19452140318700DEF6F5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				74FC1946214031A300DEF6F5 /* MapScene */,
+				74FC19792142ED8500DEF6F5 /* RPGScene.cpp */,
+				74CBDAF5212B5FB300F3B732 /* RPGScene.hpp */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		74FC1946214031A300DEF6F5 /* MapScene */ = {
+			isa = PBXGroup;
+			children = (
+				74FC1947214031D700DEF6F5 /* RPGAbstractMapScene.hpp */,
+				74FC194A214032C700DEF6F5 /* RPGDefaultMapScene.cpp */,
+				74FC194B214032C700DEF6F5 /* RPGDefaultMapScene.hpp */,
+			);
+			path = MapScene;
+			sourceTree = "<group>";
+		};
+		74FC194E214035B100DEF6F5 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				74FC195521403C6700DEF6F5 /* Cross */,
+				74FC194F2140381900DEF6F5 /* RPGControl.hpp */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		74FC195521403C6700DEF6F5 /* Cross */ = {
+			isa = PBXGroup;
+			children = (
+				74FC195621403C8B00DEF6F5 /* RPGAbstractCrossControl.hpp */,
+				74FC195821403CCF00DEF6F5 /* RPGDefaultCrossControl.cpp */,
+				74FC195921403CCF00DEF6F5 /* RPGDefaultCrossControl.hpp */,
+			);
+			path = Cross;
+			sourceTree = "<group>";
+		};
+		74FC195E21411D2E00DEF6F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				74FC196B2141348300DEF6F5 /* Object */,
+				74FC195F21411D4600DEF6F5 /* Characters */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		74FC195F21411D4600DEF6F5 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				74FC196021411D7C00DEF6F5 /* RPGCharacter.cpp */,
+				74FC196121411D7C00DEF6F5 /* RPGCharacter.hpp */,
+				74FC197021413F6400DEF6F5 /* RPGPlayerCharacter.cpp */,
+				74FC197121413F6400DEF6F5 /* RPGPlayerCharacter.hpp */,
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		74FC196421411E2B00DEF6F5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				74FC196921411EC600DEF6F5 /* RPGPoint.cpp */,
+				74FC196621411E5A00DEF6F5 /* RPGPoint.hpp */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		74FC196B2141348300DEF6F5 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				74FC196C2141349800DEF6F5 /* RPGObject.cpp */,
+				74FC196D2141349800DEF6F5 /* RPGObject.hpp */,
+			);
+			path = Object;
+			sourceTree = "<group>";
+		};
+		74FC1984214317CE00DEF6F5 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				74FC1985214317EA00DEF6F5 /* RPGRouter.cpp */,
+				74FC1986214317EA00DEF6F5 /* RPGRouter.hpp */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -231,6 +362,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74FC198A214317EA00DEF6F5 /* RPGRouter.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,10 +372,21 @@
 			files = (
 				74CBDAE2212B11DE00F3B732 /* RPGDependenciesInjectorInjectedPtrImpl.hpp in Headers */,
 				74CBDAF8212B5FB300F3B732 /* RPGScene.hpp in Headers */,
+				74FC196321411D7C00DEF6F5 /* RPGCharacter.hpp in Headers */,
+				74FC195B21403CCF00DEF6F5 /* RPGDefaultCrossControl.hpp in Headers */,
+				74FC1948214031D700DEF6F5 /* RPGAbstractMapScene.hpp in Headers */,
+				74FC196F2141349800DEF6F5 /* RPGObject.hpp in Headers */,
 				74CBDAF2212B5EA900F3B732 /* RPGame.hpp in Headers */,
+				74FC195721403C8B00DEF6F5 /* RPGAbstractCrossControl.hpp in Headers */,
+				74FC19832143162D00DEF6F5 /* RPGGameImpl.hpp in Headers */,
+				74FC1989214317EA00DEF6F5 /* RPGRouter.hpp in Headers */,
+				74FC196821411E5A00DEF6F5 /* RPGPoint.hpp in Headers */,
+				74FC19502140381900DEF6F5 /* RPGControl.hpp in Headers */,
+				74FC194D214032C700DEF6F5 /* RPGDefaultMapScene.hpp in Headers */,
 				74DC34CF2127730F004EB83D /* RPGDependenciesInjector.hpp in Headers */,
 				74A58FC3212CADC900BC8AC8 /* RPGDependenciesInjectorImpl.hpp in Headers */,
 				740FFD3E213449ED00193C58 /* loguru.hpp in Headers */,
+				74FC197321413F6400DEF6F5 /* RPGPlayerCharacter.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +509,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74FC19762142D75A00DEF6F5 /* RPGMapSceneTests.cpp in Sources */,
 				74CBDAEC212B275200F3B732 /* main.cpp in Sources */,
 				74A9743F212A143F00BCFA8C /* RPGDependenciesInjectorTests.cpp in Sources */,
 			);
@@ -375,9 +519,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74FC196221411D7C00DEF6F5 /* RPGCharacter.cpp in Sources */,
+				74FC196E2141349800DEF6F5 /* RPGObject.cpp in Sources */,
+				74FC1987214317EA00DEF6F5 /* RPGRouter.cpp in Sources */,
+				74FC197221413F6400DEF6F5 /* RPGPlayerCharacter.cpp in Sources */,
+				74FC195A21403CCF00DEF6F5 /* RPGDefaultCrossControl.cpp in Sources */,
+				74FC196A21411EC600DEF6F5 /* RPGPoint.cpp in Sources */,
 				74DC34CE2127730F004EB83D /* RPGDependenciesInjector.cpp in Sources */,
+				74FC194C214032C700DEF6F5 /* RPGDefaultMapScene.cpp in Sources */,
 				7483E427212B76A400B5B44C /* RPGame.cpp in Sources */,
-				7483E428212B76A400B5B44C /* RPGScene.cpp in Sources */,
+				74FC197A2142ED8500DEF6F5 /* RPGScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,8 +536,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7483E426212B76A300B5B44C /* RPGScene.cpp in Sources */,
+				74FC197B2142ED8500DEF6F5 /* RPGScene.cpp in Sources */,
 				74DC34DB212778C2004EB83D /* RPGDependenciesInjector.cpp in Sources */,
+				74FC1988214317EA00DEF6F5 /* RPGRouter.cpp in Sources */,
 				74DC34D7212778BC004EB83D /* main.cpp in Sources */,
 				7483E425212B76A300B5B44C /* RPGame.cpp in Sources */,
 			);

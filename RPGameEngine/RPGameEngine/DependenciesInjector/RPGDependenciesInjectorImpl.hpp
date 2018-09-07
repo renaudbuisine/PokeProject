@@ -9,7 +9,7 @@
 // TEMPLATE FUNCTIONS
 template<typename T>
 void rpg_dependenciesInjector::registerDependency(T *(*factory)(rpg_dependenciesInjector::injector&), bool shouldRetain) noexcept {
-    m_injector.m_dependencies[std::type_index(typeid(T))] = new rpg_dependenciesInjector::injector::unretainedDependency<T>(factory, shouldRetain);
+    m_injector.m_dependencies[std::type_index(typeid(T))] = new rpg_dependenciesInjector::injector::unretainedDependency<T>(factory, shouldRetain = false);
 }
 
 template<typename T>

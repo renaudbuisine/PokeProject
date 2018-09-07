@@ -1,5 +1,5 @@
 //
-//  PokeGame_iOS.h
+//  PokeGame.h
 //  PokeEngine_iOS
 //
 //  Created by Renaud Buisine on 22/08/2018.
@@ -10,7 +10,7 @@
 
 #import "PokeGameDelegate.h"
 
-@interface PokeGame_iOS : NSObject
+@interface PokeGame : NSObject
 
 @property (nonatomic, weak) id<PokeGameDelegate> delegate;
 

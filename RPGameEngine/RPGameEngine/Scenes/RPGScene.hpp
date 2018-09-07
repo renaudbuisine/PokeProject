@@ -10,15 +10,17 @@
 #define RPGScene_hpp
 
 #include "RPGDependenciesInjector.hpp"
+#include "RPGControl.hpp"
 
 class rpg_scene {
 public:
-    friend class rpg_game;
-    
-    //Destructor
+    //Constructor/Destructor
     virtual ~rpg_scene(void) noexcept = default;
     
     //Life cycle
+    
+    //Loading
+    virtual void load(void) noexcept = 0;
     
     //Updates
     /**
@@ -26,15 +28,17 @@ public:
 
      @param elapsedTimestamp elapsed time stamp (in seconds)
      */
-    virtual void update(const float elapsedTimestamp) noexcept;
+    virtual void update(const float elapsedTimestamp) noexcept = 0;
     /**
      called 30 times a second
      */
-    virtual void fixedUpdate(void) noexcept;
+    virtual void fixedUpdate(void) noexcept = 0;
+    
+    // Controls
+    virtual void addControl(std::weak_ptr<rpg_control>) noexcept = 0;
     
 protected:
-    //Constructor
-    rpg_scene(rpg_dependenciesInjector::injector& injector) noexcept;
+    rpg_scene(rpg_dependenciesInjector::injector& injector) noexcept { }
 };
 
 #endif /* RPGScene_hpp */

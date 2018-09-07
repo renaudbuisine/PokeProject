@@ -15,6 +15,6 @@ FOUNDATION_EXPORT double PokeEngine_iOSVersionNumber;
 FOUNDATION_EXPORT const unsigned char PokeEngine_iOSVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <PokeEngine_iOS/PublicHeader.h>
-#import <PokeEngine_iOS/PokeGame_iOS.h>
+#import <PokeEngine_iOS/PokeGame.h>
 #import <PokeEngine_iOS/PokeGameDelegate.h>
 

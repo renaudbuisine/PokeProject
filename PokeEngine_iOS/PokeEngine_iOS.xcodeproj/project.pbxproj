@@ -10,13 +10,15 @@
 		740FFD462134522E00193C58 /* NSString+cpp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 740FFD442134522E00193C58 /* NSString+cpp.mm */; };
 		74296A092136E05000FAA1BB /* PokeEngine_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A5908C212D619E00BC8AC8 /* PokeEngine_iOS.framework */; };
 		74296A1E2136E36A00FAA1BB /* NSString+cpp.h in Headers */ = {isa = PBXBuildFile; fileRef = 740FFD432134522E00193C58 /* NSString+cpp.h */; };
-		74296A1F2136E36A00FAA1BB /* PokeGame_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 749D6AF1212DA1C300809FDB /* PokeGame_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74296A1F2136E36A00FAA1BB /* PokeGame.h in Headers */ = {isa = PBXBuildFile; fileRef = 749D6AF1212DA1C300809FDB /* PokeGame.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74296A202136E36A00FAA1BB /* PokeEngine_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 74A5908F212D619E00BC8AC8 /* PokeEngine_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		745D3822213C771500A74248 /* PokeGameDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 745D3821213C771500A74248 /* PokeGameDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749D6AF0212DA19B00809FDB /* libPokeEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 749D6AEF212DA19B00809FDB /* libPokeEngine.a */; };
-		749D6AF4212DA1C300809FDB /* PokeGame_iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 749D6AF2212DA1C300809FDB /* PokeGame_iOS.mm */; };
-		749D6AFC212DA21C00809FDB /* PokeEngine_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749D6AFB212DA21C00809FDB /* PokeEngine_iOSTests.swift */; };
+		749D6AF4212DA1C300809FDB /* PokeGame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 749D6AF2212DA1C300809FDB /* PokeGame.mm */; };
+		749D6AFC212DA21C00809FDB /* PokeGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749D6AFB212DA21C00809FDB /* PokeGameTests.swift */; };
 		74FC190F213EE2E800DEF6F5 /* MockPokeGameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FC190E213EE2E800DEF6F5 /* MockPokeGameDelegate.swift */; };
+		74FC197F2142F3DA00DEF6F5 /* PokeMapScene.h in Headers */ = {isa = PBXBuildFile; fileRef = 74FC197D2142F3DA00DEF6F5 /* PokeMapScene.h */; };
+		74FC19802142F3DA00DEF6F5 /* PokeMapScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74FC197E2142F3DA00DEF6F5 /* PokeMapScene.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,15 +38,17 @@
 		74296A062136DD8E00FAA1BB /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		745D3821213C771500A74248 /* PokeGameDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PokeGameDelegate.h; sourceTree = "<group>"; };
 		749D6AEF212DA19B00809FDB /* libPokeEngine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPokeEngine.a; path = ../Products/libPokeEngine.a; sourceTree = "<group>"; };
-		749D6AF1212DA1C300809FDB /* PokeGame_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PokeGame_iOS.h; sourceTree = "<group>"; };
-		749D6AF2212DA1C300809FDB /* PokeGame_iOS.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PokeGame_iOS.mm; sourceTree = "<group>"; };
+		749D6AF1212DA1C300809FDB /* PokeGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PokeGame.h; sourceTree = "<group>"; };
+		749D6AF2212DA1C300809FDB /* PokeGame.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PokeGame.mm; sourceTree = "<group>"; };
 		749D6AF9212DA21C00809FDB /* PokeEngine_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokeEngine_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		749D6AFB212DA21C00809FDB /* PokeEngine_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeEngine_iOSTests.swift; sourceTree = "<group>"; };
+		749D6AFB212DA21C00809FDB /* PokeGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeGameTests.swift; sourceTree = "<group>"; };
 		749D6AFD212DA21C00809FDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74A5908C212D619E00BC8AC8 /* PokeEngine_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PokeEngine_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74A5908F212D619E00BC8AC8 /* PokeEngine_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PokeEngine_iOS.h; sourceTree = "<group>"; };
 		74A59090212D619E00BC8AC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74FC190E213EE2E800DEF6F5 /* MockPokeGameDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPokeGameDelegate.swift; sourceTree = "<group>"; };
+		74FC197D2142F3DA00DEF6F5 /* PokeMapScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PokeMapScene.h; sourceTree = "<group>"; };
+		74FC197E2142F3DA00DEF6F5 /* PokeMapScene.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PokeMapScene.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +83,8 @@
 		749D6AED212DA16E00809FDB /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				749D6AF1212DA1C300809FDB /* PokeGame_iOS.h */,
-				749D6AF2212DA1C300809FDB /* PokeGame_iOS.mm */,
+				749D6AF1212DA1C300809FDB /* PokeGame.h */,
+				749D6AF2212DA1C300809FDB /* PokeGame.mm */,
 				745D3821213C771500A74248 /* PokeGameDelegate.h */,
 			);
 			path = Game;
@@ -99,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				74FC190D213EE2D100DEF6F5 /* Mock */,
-				749D6AFB212DA21C00809FDB /* PokeEngine_iOSTests.swift */,
+				749D6AFB212DA21C00809FDB /* PokeGameTests.swift */,
 				749D6AFD212DA21C00809FDB /* Info.plist */,
 			);
 			path = PokeEngine_iOSTests;
@@ -128,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				740FFD422134521000193C58 /* Categories */,
+				74FC197C2142F32F00DEF6F5 /* Scenes */,
 				749D6AED212DA16E00809FDB /* Game */,
 				74A5908F212D619E00BC8AC8 /* PokeEngine_iOS.h */,
 				74A59090212D619E00BC8AC8 /* Info.plist */,
@@ -144,6 +149,15 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		74FC197C2142F32F00DEF6F5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				74FC197D2142F3DA00DEF6F5 /* PokeMapScene.h */,
+				74FC197E2142F3DA00DEF6F5 /* PokeMapScene.mm */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -153,8 +167,9 @@
 			files = (
 				745D3822213C771500A74248 /* PokeGameDelegate.h in Headers */,
 				74296A1E2136E36A00FAA1BB /* NSString+cpp.h in Headers */,
-				74296A1F2136E36A00FAA1BB /* PokeGame_iOS.h in Headers */,
+				74296A1F2136E36A00FAA1BB /* PokeGame.h in Headers */,
 				74296A202136E36A00FAA1BB /* PokeEngine_iOS.h in Headers */,
+				74FC197F2142F3DA00DEF6F5 /* PokeMapScene.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +219,7 @@
 		74A59083212D619E00BC8AC8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = Poke;
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Renaud Buisine";
@@ -273,7 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				749D6AFC212DA21C00809FDB /* PokeEngine_iOSTests.swift in Sources */,
+				749D6AFC212DA21C00809FDB /* PokeGameTests.swift in Sources */,
 				74FC190F213EE2E800DEF6F5 /* MockPokeGameDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,7 +298,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				749D6AF4212DA1C300809FDB /* PokeGame_iOS.mm in Sources */,
+				74FC19802142F3DA00DEF6F5 /* PokeMapScene.mm in Sources */,
+				749D6AF4212DA1C300809FDB /* PokeGame.mm in Sources */,
 				740FFD462134522E00193C58 /* NSString+cpp.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

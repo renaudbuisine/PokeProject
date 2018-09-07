@@ -31,7 +31,8 @@ rpg_game::~rpg_game(void) noexcept {
     LOG_F(INFO, "DESTROY %s", m_name.c_str());
 }
 
-// PURE VIRTUAL FUNCTIONS
+// LOAD / UPDATES
+
 void rpg_game::update(const float elapsedTimestamp) {
     if (m_updateCallBack != NULL) {
         m_updateCallBack(elapsedTimestamp);
@@ -126,16 +127,15 @@ void rpg_game::setFixedUpdateCallback(rpg_game::fixedUpdateCallBack callback) no
     m_fixedUpdateCallback = callback;
 }
 
+// SCENES
+
+void rpg_game::addScene(const std::shared_ptr<rpg_scene>& scenePtr) noexcept {
+    m_scenes.push(scenePtr);
+}
+
 // UTILS
 std::string rpg_game::toString(void) const noexcept {
     std::stringstream ss;
     ss << "[rpg_game:{name: " << m_name << ";scenes:" << m_scenes.size() << "}]";
     return ss.str();
-}
-
-// PROTECTED FUNCTIONS
-
-template<typename T>
-void rpg_game::registerDependency() {
-    m_dependenciesInjector.registerDependency<T>();
 }
