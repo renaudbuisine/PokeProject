@@ -19,5 +19,308 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RPGameEngine/RPGameEngine/DependenciesInjector/RPGDependenciesInjectorUnretainedDependencyImpl.hpp"
+            timestampString = "558140688.9285049"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "callFactory(rpg_dependenciesInjector::injector&amp; injector)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "rpg_dependenciesInjector::injector::unretainedDependency&lt;A&gt;::callFactory(rpg_dependenciesInjector::injector&amp;) const"
+                  moduleName = "RPGameEngineTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/buisinr/Desktop/Projects/PokeProject/RPGameEngine/RPGameEngine/DependenciesInjector/RPGDependenciesInjectorUnretainedDependencyImpl.hpp"
+                  timestampString = "558049061.931242"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "rpg_dependenciesInjector::injector::unretainedDependency&lt;B&gt;::callFactory(rpg_dependenciesInjector::injector&amp;) const"
+                  moduleName = "RPGameEngineTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/buisinr/Desktop/Projects/PokeProject/RPGameEngine/RPGameEngine/DependenciesInjector/RPGDependenciesInjectorUnretainedDependencyImpl.hpp"
+                  timestampString = "558049061.9376611"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "rpg_dependenciesInjector::injector::unretainedDependency&lt;C&gt;::callFactory(rpg_dependenciesInjector::injector&amp;) const"
+                  moduleName = "RPGameEngineTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/buisinr/Desktop/Projects/PokeProject/RPGameEngine/RPGameEngine/DependenciesInjector/RPGDependenciesInjectorUnretainedDependencyImpl.hpp"
+                  timestampString = "558049061.94127"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokeEngine_iOS/PokeEngine_iOS/Game/PokeGame.mm"
+            timestampString = "558140688.928579"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "-load"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThirdParties/Cpp/Loguru/loguru.hpp"
+            timestampString = "558897438.100765"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2119"
+            endingLineNumber = "2119"
+            landmarkName = "create_directories(const char* file_path_const)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "loguru::remove_all_callbacks()"
+                  moduleName = "RPGameEngineTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/buisinr/Desktop/Projects/PokeProject/ThirdParties/Cpp/Loguru/loguru.hpp"
+                  timestampString = "558981168.973245"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2120"
+                  endingLineNumber = "2120"
+                  offsetFromSymbolStart = "113">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "loguru::remove_all_callbacks()"
+                  moduleName = "RPGameEngineTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/buisinr/Desktop/Projects/PokeProject/ThirdParties/Cpp/Loguru/loguru.hpp"
+                  timestampString = "558981168.976084"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2120"
+                  endingLineNumber = "2120"
+                  offsetFromSymbolStart = "513">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThirdParties/Cpp/Loguru/loguru.hpp"
+            timestampString = "558897438.100854"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2598"
+            endingLineNumber = "2598"
+            landmarkName = "create_directories(const char* file_path_const)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThirdParties/Cpp/Loguru/loguru.hpp"
+            timestampString = "558897438.100909"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2613"
+            endingLineNumber = "2613"
+            landmarkName = "create_directories(const char* file_path_const)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "loguru::LogScopeRAII::LogScopeRAII(int, char const*, unsigned int, char const*, ...)"
+                  moduleName = "RPGameEngineTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/buisinr/Desktop/Projects/PokeProject/ThirdParties/Cpp/Loguru/loguru.hpp"
+                  timestampString = "558981169.002234"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2614"
+                  endingLineNumber = "2614"
+                  offsetFromSymbolStart = "475">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "loguru::LogScopeRAII::LogScopeRAII(int, char const*, unsigned int, char const*, ...)"
+                  moduleName = "RPGameEngineTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/buisinr/Desktop/Projects/PokeProject/ThirdParties/Cpp/Loguru/loguru.hpp"
+                  timestampString = "558981169.005234"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2614"
+                  endingLineNumber = "2614"
+                  offsetFromSymbolStart = "475">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThirdParties/Cpp/Loguru/loguru.hpp"
+            timestampString = "558897438.100963"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2639"
+            endingLineNumber = "2639"
+            landmarkName = "create_directories(const char* file_path_const)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RPGameEngine/RPGameEngineTests/RPGRouterTests.cpp"
+            timestampString = "558981168.558964"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "SCENARIO (&quot;Load and display new scene&quot;, &quot;[rpg_router::prepareScene]&quot;)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "____C_A_T_C_H____T_E_S_T____0()"
+                  moduleName = "RPGameEngineTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/buisinr/Desktop/Projects/PokeProject/RPGameEngine/RPGameEngineTests/RPGRouterTests.cpp"
+                  timestampString = "558953712.834518"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "19399">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "____C_A_T_C_H____T_E_S_T____0()"
+                  moduleName = "RPGameEngineTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/buisinr/Desktop/Projects/PokeProject/RPGameEngine/RPGameEngineTests/RPGRouterTests.cpp"
+                  timestampString = "558953712.8374619"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "19404">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RPGameEngine/RPGameEngineTests/RPGRouterTests.cpp"
+            timestampString = "558981168.5597219"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "SCENARIO (&quot;Load and display new scene&quot;, &quot;[rpg_router::prepareScene]&quot;)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "____C_A_T_C_H____T_E_S_T____0()"
+                  moduleName = "RPGameEngineTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/buisinr/Desktop/Projects/PokeProject/RPGameEngine/RPGameEngineTests/RPGRouterTests.cpp"
+                  timestampString = "558952856.355918"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "18482">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "____C_A_T_C_H____T_E_S_T____0()"
+                  moduleName = "RPGameEngineTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/buisinr/Desktop/Projects/PokeProject/RPGameEngine/RPGameEngineTests/RPGRouterTests.cpp"
+                  timestampString = "558952856.358608"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "18739">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -12,11 +12,12 @@
 
 @interface PokeGame : NSObject
 
-@property (nonatomic, weak) id<PokeGameDelegate> delegate;
+@property (nonatomic, weak) id <PokeGameDelegate> _Nullable delegate;
 
-- (instancetype)initWithName:(NSString *)name;
+- (instancetype _Nonnull)initWithName:(NSString * _Nonnull)name;
 
 // Life cycle
+- (void)load;
 - (void)run;
 - (void)pause;
 - (void)resume;

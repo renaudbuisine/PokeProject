@@ -10,7 +10,7 @@
 #define RPGDependenciesInjectorUnretainedDependencyImpl_hpp
 
 template<typename T>
-rpg_dependenciesInjector::injector::unretainedDependency<T>::unretainedDependency(T *(*factory)(rpg_dependenciesInjector::injector&), bool shouldRetain) noexcept: m_factory(factory), m_shouldRetain(shouldRetain) { }
+rpg_dependenciesInjector::injector::unretainedDependency<T>::unretainedDependency(const std::function<T *(rpg_dependenciesInjector::injector&)>& factory, bool shouldRetain) noexcept: m_factory(factory), m_shouldRetain(shouldRetain) { }
 
 // FUNCTIONS
 

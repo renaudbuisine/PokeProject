@@ -17,8 +17,12 @@
 		749D6AF4212DA1C300809FDB /* PokeGame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 749D6AF2212DA1C300809FDB /* PokeGame.mm */; };
 		749D6AFC212DA21C00809FDB /* PokeGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749D6AFB212DA21C00809FDB /* PokeGameTests.swift */; };
 		74FC190F213EE2E800DEF6F5 /* MockPokeGameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FC190E213EE2E800DEF6F5 /* MockPokeGameDelegate.swift */; };
-		74FC197F2142F3DA00DEF6F5 /* PokeMapScene.h in Headers */ = {isa = PBXBuildFile; fileRef = 74FC197D2142F3DA00DEF6F5 /* PokeMapScene.h */; };
+		74FC197F2142F3DA00DEF6F5 /* PokeMapScene.h in Headers */ = {isa = PBXBuildFile; fileRef = 74FC197D2142F3DA00DEF6F5 /* PokeMapScene.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74FC19802142F3DA00DEF6F5 /* PokeMapScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74FC197E2142F3DA00DEF6F5 /* PokeMapScene.mm */; };
+		74FC19A121432BB500DEF6F5 /* PokeScene.h in Headers */ = {isa = PBXBuildFile; fileRef = 74FC199F21432BB500DEF6F5 /* PokeScene.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74FC19A221432BB500DEF6F5 /* PokeScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74FC19A021432BB500DEF6F5 /* PokeScene.mm */; };
+		74FC19A321432BEB00DEF6F5 /* libRPGameEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74296A042136CBB200FAA1BB /* libRPGameEngine.a */; };
+		74FC19A521432C6300DEF6F5 /* PokeScene+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 74FC19A421432C5A00DEF6F5 /* PokeScene+Private.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,9 @@
 		74FC190E213EE2E800DEF6F5 /* MockPokeGameDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPokeGameDelegate.swift; sourceTree = "<group>"; };
 		74FC197D2142F3DA00DEF6F5 /* PokeMapScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PokeMapScene.h; sourceTree = "<group>"; };
 		74FC197E2142F3DA00DEF6F5 /* PokeMapScene.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PokeMapScene.mm; sourceTree = "<group>"; };
+		74FC199F21432BB500DEF6F5 /* PokeScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PokeScene.h; sourceTree = "<group>"; };
+		74FC19A021432BB500DEF6F5 /* PokeScene.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PokeScene.mm; sourceTree = "<group>"; };
+		74FC19A421432C5A00DEF6F5 /* PokeScene+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PokeScene+Private.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				749D6AF0212DA19B00809FDB /* libPokeEngine.a in Frameworks */,
+				74FC19A321432BEB00DEF6F5 /* libRPGameEngine.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +160,9 @@
 		74FC197C2142F32F00DEF6F5 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				74FC199F21432BB500DEF6F5 /* PokeScene.h */,
+				74FC19A421432C5A00DEF6F5 /* PokeScene+Private.h */,
+				74FC19A021432BB500DEF6F5 /* PokeScene.mm */,
 				74FC197D2142F3DA00DEF6F5 /* PokeMapScene.h */,
 				74FC197E2142F3DA00DEF6F5 /* PokeMapScene.mm */,
 			);
@@ -167,9 +178,11 @@
 			files = (
 				745D3822213C771500A74248 /* PokeGameDelegate.h in Headers */,
 				74296A1E2136E36A00FAA1BB /* NSString+cpp.h in Headers */,
+				74FC19A121432BB500DEF6F5 /* PokeScene.h in Headers */,
 				74296A1F2136E36A00FAA1BB /* PokeGame.h in Headers */,
 				74296A202136E36A00FAA1BB /* PokeEngine_iOS.h in Headers */,
 				74FC197F2142F3DA00DEF6F5 /* PokeMapScene.h in Headers */,
+				74FC19A521432C6300DEF6F5 /* PokeScene+Private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +314,7 @@
 				74FC19802142F3DA00DEF6F5 /* PokeMapScene.mm in Sources */,
 				749D6AF4212DA1C300809FDB /* PokeGame.mm in Sources */,
 				740FFD462134522E00193C58 /* NSString+cpp.mm in Sources */,
+				74FC19A221432BB500DEF6F5 /* PokeScene.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

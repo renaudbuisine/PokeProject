@@ -25,7 +25,7 @@ public:
         left = 1 << 1,
         top = 1 << 2,
         right = 1 << 3,
-        bottom = 1 << 4,
+        bottom = 1 << 4
     };
     
     virtual bool isPerforming(const direction) const noexcept = 0;

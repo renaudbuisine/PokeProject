@@ -74,14 +74,14 @@ public:
         public:
             friend class rpg_dependenciesInjector;
             //unretainedDependency / public constructor/desctructor
-            unretainedDependency(T *(*)(injector&), bool) noexcept;
+            unretainedDependency(const std::function<T *(rpg_dependenciesInjector::injector&)>&, bool) noexcept;
             ~unretainedDependency(void) noexcept = default;
             
             void *callFactory(injector&) const override final;
             bool shouldRetain(void) const override final;
         private:
             //dependency / Private attributes
-            T *(*m_factory)(injector&);
+            const std::function<T *(rpg_dependenciesInjector::injector&)>& m_factory;
             bool m_shouldRetain;
         };
         
@@ -116,7 +116,7 @@ public:
     
     //Public function
     template<typename T>
-    void registerDependency(T *(*)(rpg_dependenciesInjector::injector&), bool = false) noexcept;
+    void registerDependency(const std::function<T *(rpg_dependenciesInjector::injector&)>&, bool = false) noexcept;
     void clear(void) noexcept;
     
     // GETTERs

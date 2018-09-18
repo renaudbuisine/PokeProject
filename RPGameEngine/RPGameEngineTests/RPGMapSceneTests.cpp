@@ -8,16 +8,24 @@
 
 #include "catch.hpp"
 
+#include "RPGDefaultGame.hpp"
 #include "RPGDefaultMapScene.hpp"
 #include "RPGDefaultCrossControl.hpp"
 #include "RPGDependenciesInjector.hpp"
 
 // STATEFULL VAR
-rpg_dependenciesInjector dependenciesInjector;
-rpg_mapScene *mapScene = new rpg_default_mapScene(*dependenciesInjector.getInjector());
+rpg_game *mapSceneTestsGame;
+rpg_dependenciesInjector *dependenciesInjector;
+rpg_mapScene *mapScene;
 
 
 SCENARIO ("Add cross control", "[rpg_mapScene::addControl]") {
+    
+    if(!mapSceneTestsGame) {
+        mapSceneTestsGame = new rpg_default_game("mapSceneTestsGame");
+        dependenciesInjector = new rpg_dependenciesInjector();
+        mapScene = new rpg_default_mapScene(*dependenciesInjector->getInjector());
+    }
     
     GIVEN ("A dependencies injector, a cross control and a map scene, all initialized") {
         bool callbackCalled = false;

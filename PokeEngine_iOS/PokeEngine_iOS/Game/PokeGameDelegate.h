@@ -6,11 +6,14 @@
 //  Copyright © 2018 Renaud Buisine. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@class PokeGame;
+@class PokeScene;
 
 @protocol PokeGameDelegate <NSObject>
-    @optional
-    -(void) didUpdateWithElapsedTimestamp:(float)elapsedTimestamp;
-    @optional
-    -(void) didFixedUpdate;
+- (void)game:(PokeGame * _Nonnull)game didAddScene:(PokeScene * _Nonnull)scene;
+
+@optional
+- (void)game:(PokeGame * _Nonnull)game didUpdateWithElapsedTimestamp:(float)elapsedTimestamp;
+@optional
+- (void)didFixedUpdate:(PokeGame * _Nonnull)game;
 @end

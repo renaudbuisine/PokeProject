@@ -14,6 +14,9 @@
 
 class rpg_scene {
 public:
+    friend class rpg_router;
+    friend class rpg_game;
+    
     //Constructor/Destructor
     virtual ~rpg_scene(void) noexcept = default;
     
@@ -37,8 +40,19 @@ public:
     // Controls
     virtual void addControl(std::weak_ptr<rpg_control>) noexcept = 0;
     
+    // GETTERS
+    bool isLoaded(void) noexcept;
+    bool isRunning(void) const noexcept;
+    
 protected:
-    rpg_scene(rpg_dependenciesInjector::injector& injector) noexcept { }
+    rpg_scene(rpg_dependenciesInjector::injector& injector) noexcept;
+    
+private:
+    bool m_loaded;
+    bool m_running;
+    
+    void setIsLoaded(bool) noexcept;
+    void setIsRunning(bool) noexcept;
 };
 
 #endif /* RPGScene_hpp */

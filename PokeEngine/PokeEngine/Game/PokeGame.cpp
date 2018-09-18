@@ -9,6 +9,7 @@
 #include "PokeGame.hpp"
 
 #include "PokeDefaultMapRouter.hpp"
+#include "PokeMapScene.hpp"
 
 poke_game::poke_game(std::string name) noexcept: rpg_game(name) { }
 
@@ -20,12 +21,13 @@ void poke_game::load(void) noexcept {
 }
 
 void poke_game::loadDependencies(void) noexcept {
-    auto mapRouterFactory = [&](rpg_dependenciesInjector::injector& injector){
+    registerDependency<poke_mapRouter>([&](rpg_dependenciesInjector::injector& injector){
         return new poke_default_mapRouter(*this);
-    };
-    registerDependency<poke_mapRouter>(mapRouterFactory);
+    });
 }
 
 void poke_game::loadRootScene(void) noexcept {
-    
+//    auto rootScene = createScene<poke_mapScene>();
+//    addScene(rootScene);
+    load router instead
 }

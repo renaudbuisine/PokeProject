@@ -7,28 +7,20 @@
 //
 
 #import "PokeMapScene.h"
+#import "PokeScene+Private.h"
 
 #include <RPGameEngine/RPGDefaultMapScene.hpp>
 
-@interface PokeMapScene() {
-    rpg_mapScene *_scene;
-}
+@interface PokeMapScene()
+
+@property (nonatomic, readonly) std::shared_ptr<rpg_mapScene> wrappedMapScenePtr;
 
 @end
 
 @implementation PokeMapScene
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _scene = rpg_default_mapScene
-    }
-    return self;
-}
-
-- (void)dealloc {
-    delete _scene;
+- (std::shared_ptr<rpg_mapScene>)wrappedMapScenePtr {
+    return std::dynamic_pointer_cast<rpg_mapScene>(super.wrappedScenePtr.lock());
 }
 
 @end

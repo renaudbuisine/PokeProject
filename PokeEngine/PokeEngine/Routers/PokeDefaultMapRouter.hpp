@@ -11,7 +11,7 @@
 
 #include "PokeAbstractMapRouter.hpp"
 
-class poke_default_mapRouter final: poke_mapRouter {
+class poke_default_mapRouter final: public poke_mapRouter {
 public:
     poke_default_mapRouter(const rpg_game&) noexcept;
 private:

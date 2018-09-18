@@ -6,8 +6,8 @@
 //  Copyright © 2018 Renaud Buisine. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "PokeScene.h"
 
-@interface PokeMapScene : NSObject
+@interface PokeMapScene: PokeScene
 
 @end

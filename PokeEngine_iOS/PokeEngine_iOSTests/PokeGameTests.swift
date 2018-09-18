@@ -11,7 +11,7 @@ import XCTest
 
 class PokeGameTests: XCTestCase {
     
-    private var game: PokeGame_iOS!
+    private var game: PokeGame!
     private var gameDelegate: MockPokeGameDelegate!
     
     override func setUp() {
@@ -20,14 +20,9 @@ class PokeGameTests: XCTestCase {
         XCTContext.runActivity(named: "GIVEN a PokeGame iOS and its delegate object") { _ in
             gameDelegate = MockPokeGameDelegate()
             
-            game = PokeGame_iOS(name: "TestGame")
+            game = PokeGame(name: "TestGame")
             game.delegate = gameDelegate
         }
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
     }
     
     func testLifeCycle() {
@@ -85,4 +80,13 @@ class PokeGameTests: XCTestCase {
         }
     }
     
+    func testLoad() {
+        XCTContext.runActivity(named: "WHEN loading game") { _ in
+            game.load()
+        }
+        
+        XCTContext.runActivity(named: "THEN a scene is created") { _ in
+            XCTAssertNotNil(gameDelegate.addedScene);
+        }
+    }
 }

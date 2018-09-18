@@ -8,8 +8,8 @@
 
 // TEMPLATE FUNCTIONS
 template<typename T>
-void rpg_dependenciesInjector::registerDependency(T *(*factory)(rpg_dependenciesInjector::injector&), bool shouldRetain) noexcept {
-    m_injector.m_dependencies[std::type_index(typeid(T))] = new rpg_dependenciesInjector::injector::unretainedDependency<T>(factory, shouldRetain = false);
+void rpg_dependenciesInjector::registerDependency(const std::function<T *(rpg_dependenciesInjector::injector&)>& factory, bool shouldRetain) noexcept {
+    m_injector.m_dependencies[std::type_index(typeid(T))] = new rpg_dependenciesInjector::injector::unretainedDependency<T>(factory, shouldRetain);
 }
 
 template<typename T>

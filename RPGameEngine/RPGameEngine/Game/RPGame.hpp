@@ -12,7 +12,7 @@
 #include <mutex>
 #include <time.h>
 #include <thread>
-#include <stack>
+#include <vector>
 #include <string>
 
 #include "RPGDependenciesInjector.hpp"
@@ -20,11 +20,16 @@
 
 #define RPG_FPS 30
 
+class rpg_router;
 class rpg_game {
 public:
     //TYPEALIAS
     using updateCallBack = std::function<void(const float)>;
     using fixedUpdateCallBack = std::function<void(void)>;
+    using addSceneCallBack = std::function<void(std::shared_ptr<rpg_scene>)>;
+    using removeSceneCallBack = std::function<void(std::shared_ptr<rpg_scene>)>;
+    
+    friend class rpg_router;
     
     // CONTRUCTOR/DESTRUCTOR
     rpg_game(const std::string&) noexcept;
@@ -68,47 +73,66 @@ public:
      
      @param elapsedTimestamp elapsed time stamp (in seconds)
      */
-    virtual void update(const float elapsedTimestamp);
+    virtual void update(const float elapsedTimestamp) = 0;
     /**
      called 30 times a second
      (needs override)
      */
-    virtual void fixedUpdate(void);
+    virtual void fixedUpdate(void) = 0;
     
     //SCENES
     template<typename T = rpg_scene>
     std::shared_ptr<T> createScene(void) noexcept;
     
     /**
-     Add new scene to tht stacj
+     Add new scene to the stack
 
      @param scenePtr Pointer to new scene
+     @param subScenesPaused Are scene below paused, default true
      */
-    void addScene(const std::shared_ptr<rpg_scene>& scenePtr) noexcept;
+    void pushScene(std::shared_ptr<rpg_scene>& scenePtr, const bool subScenesPaused = true) noexcept;
+    
+    /**
+     Remove scene from the stack
+     */
+    void popScene(void) noexcept;
+    
+    /**
+     Replace scenes stack with provided scene
+
+     @param scenePtr New root scene
+     */
+    void setRootScene(std::shared_ptr<rpg_scene>& scenePtr) noexcept;
+    
     
     //GETTER SETTER
-    void setUpdateCallback(updateCallBack callback) noexcept;
-    void setFixedUpdateCallback(fixedUpdateCallBack callback) noexcept;
+    void setUpdateCallback(updateCallBack) noexcept;
+    void setFixedUpdateCallback(fixedUpdateCallBack) noexcept;
+    void setAddSceneCallBack(addSceneCallBack) noexcept;
+    void setRemoveSceneCallBack(removeSceneCallBack) noexcept;
+    
+    const std::vector<std::shared_ptr<rpg_scene>>& getScenes(void) const noexcept;
+    size_t updatedRoutersSize(void) const noexcept;
     
 protected:
     
     template<typename T>
-    void registerDependency(T *(*factory)(rpg_dependenciesInjector::injector&), bool = false) noexcept;
+    void registerDependency(const std::function<T *(rpg_dependenciesInjector::injector&)>&, bool = false) noexcept;
     
 private:
-    
-    void setPaused(bool) noexcept;
-    
     //OTHERS
     const std::string m_name;
     
     //Attributes
     rpg_dependenciesInjector m_dependenciesInjector;
-    std::stack<std::shared_ptr<rpg_scene>> m_scenes;
+    std::vector<std::shared_ptr<rpg_scene>> m_scenes;
+    std::vector<rpg_router *> m_routers;
     
     //CALLBACKS
     updateCallBack m_updateCallBack;
     fixedUpdateCallBack m_fixedUpdateCallback;
+    addSceneCallBack m_addSceneCallBack;
+    removeSceneCallBack m_removeSceneCallBack;
     
     //STATUS
     bool m_isRunning;
@@ -119,8 +143,31 @@ private:
     std::condition_variable m_runThreadCV;
     //TIMESTAMP
     float m_runningTimestamp;
+    
+    //PRIVATE FUNC
+    void setPaused(bool) noexcept;
+    void innerUpdate(const float);
+    void innerFixedUpdate(void);
+    void addScene(const std::shared_ptr<rpg_scene>&) noexcept;
+    
+    
+    /**
+     Add router object to list, will be updated by game object
+     
+     @param router Pointer to router object
+     */
+    void addRouter(rpg_router *router) noexcept;
+    /**
+     Remove router pointer from vector
+     
+     @param router router pointer
+     */
+    void removeRouter(rpg_router *router) noexcept;
 };
 
 #include "RPGGameImpl.hpp"
+
+
+#include "RPGRouter.hpp"
 
 #endif /* RPGame_hpp */

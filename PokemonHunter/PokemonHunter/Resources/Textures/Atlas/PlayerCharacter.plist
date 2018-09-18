@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>texture</key>
+	<string>player_map_sprites</string>
+	<key>frames</key>
+	<array>
+		<dict>
+			<key>id</key>
+			<string>walk_0</string>
+			<key>frame_front</key>
+			<string>{{0,0},{14, 21}}</string>
+			<key>frame_back</key>
+			<string>{{14,0},{14, 21}}</string>
+			<key>frame_profil</key>
+			<string>{{28,0},{14, 21}}</string>
+		</dict>
+		<dict>
+			<key>id</key>
+			<string>walk_1</string>
+			<key>frame_front</key>
+			<string>{{0,21},{14, 21}}</string>
+			<key>frame_back</key>
+			<string>{{14,21},{14, 21}}</string>
+			<key>frame_profil</key>
+			<string>{{28,21},{14, 21}}</string>
+		</dict>
+		<dict>
+			<key>id</key>
+			<string>walk_2</string>
+			<key>frame_front</key>
+			<string>{{0,42},{14, 21}}</string>
+			<key>frame_back</key>
+			<string>{{14,42},{14, 21}}</string>
+			<key>frame_profil</key>
+			<string>{{28,42},{14, 21}}</string>
+		</dict>
+		<dict>
+			<key>id</key>
+			<string>walk_3</string>
+			<key>frame_front</key>
+			<string>{{0,63},{14, 21}}</string>
+			<key>frame_back</key>
+			<string>{{14,63},{14, 21}}</string>
+			<key>frame_profil</key>
+			<string>{{28,63},{14, 21}}</string>
+		</dict>
+		<dict>
+			<key>id</key>
+			<string>walk_4</string>
+			<key>frame_front</key>
+			<string>{{0,84},{14, 21}}</string>
+			<key>frame_back</key>
+			<string>{{14,84},{14, 21}}</string>
+			<key>frame_profil</key>
+			<string>{{28,84},{14, 21}}</string>
+		</dict>
+		<dict>
+			<key>id</key>
+			<string>walk_5</string>
+			<key>frame_front</key>
+			<string>{{0,105},{14, 21}}</string>
+			<key>frame_back</key>
+			<string>{{14,105},{14, 21}}</string>
+			<key>frame_profil</key>
+			<string>{{28,105},{14, 21}}</string>
+		</dict>
+	</array>
+	<key>animations</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>walk</string>
+			<key>frames</key>
+			<array>
+				<string>walk_0</string>
+				<string>walk_1</string>
+				<string>walk_2</string>
+				<string>walk_3</string>
+				<string>walk_4</string>
+				<string>walk_5</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

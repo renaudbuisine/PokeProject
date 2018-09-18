@@ -14,6 +14,7 @@ class MockPokeGameDelegate: NSObject {
     private var updateExpectations: [XCTestExpectation]
     private(set) var didFixedUpdateCalled: Bool
     private(set) var didUpdateCalled: Bool
+    private(set) var addedScene: PokeScene?
     
     var expectations: [XCTestExpectation] {
         return fixedUpdateExpectations + updateExpectations;
@@ -24,6 +25,7 @@ class MockPokeGameDelegate: NSObject {
         updateExpectations = []
         didFixedUpdateCalled = false
         didUpdateCalled = false
+        addedScene = nil;
         
         super.init()
     }
@@ -51,13 +53,17 @@ class MockPokeGameDelegate: NSObject {
 }
 
 extension MockPokeGameDelegate: PokeGameDelegate {
-    func didFixedUpdate() {
-        fixedUpdateExpectations.popLast()?.fulfill()
-        didFixedUpdateCalled = true
+    func game(_ game: PokeGame, didAdd scene: PokeScene) {
+        addedScene = scene
     }
     
-    func didUpdate(withElapsedTimestamp elapsedTimestamp: Float) {
+    func game(_ game: PokeGame, didUpdateWithElapsedTimestamp elapsedTimestamp: Float) {
         updateExpectations.popLast()?.fulfill()
         didUpdateCalled = true
+    }
+    
+    func didFixedUpdate(_ game: PokeGame) {
+        fixedUpdateExpectations.popLast()?.fulfill()
+        didFixedUpdateCalled = true
     }
 }

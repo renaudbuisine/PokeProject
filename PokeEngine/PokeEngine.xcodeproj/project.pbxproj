@@ -17,8 +17,8 @@
 		74CBDB17212B63FF00F3B732 /* libRPGameEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CBDB16212B63FF00F3B732 /* libRPGameEngine.a */; };
 		74CBDB1A212B64C900F3B732 /* libRPGameEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CBDB19212B64C900F3B732 /* libRPGameEngine.a */; };
 		74FC198F21431BC000DEF6F5 /* PokeMapScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74FC198D21431BC000DEF6F5 /* PokeMapScene.cpp */; };
-		74FC199021431BC000DEF6F5 /* PokeMapScene.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74FC198E21431BC000DEF6F5 /* PokeMapScene.hpp */; };
-		74FC199421431D9A00DEF6F5 /* PokeAbstractMapRouter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74FC199221431D9A00DEF6F5 /* PokeAbstractMapRouter.hpp */; };
+		74FC199021431BC000DEF6F5 /* PokeMapScene.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74FC198E21431BC000DEF6F5 /* PokeMapScene.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		74FC199421431D9A00DEF6F5 /* PokeAbstractMapRouter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74FC199221431D9A00DEF6F5 /* PokeAbstractMapRouter.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		74FC199721431E7D00DEF6F5 /* PokeDefaultMapRouter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74FC199521431E7D00DEF6F5 /* PokeDefaultMapRouter.cpp */; };
 		74FC199821431E7D00DEF6F5 /* PokeDefaultMapRouter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 74FC199621431E7D00DEF6F5 /* PokeDefaultMapRouter.hpp */; };
 /* End PBXBuildFile section */

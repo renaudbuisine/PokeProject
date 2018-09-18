@@ -13,7 +13,7 @@
 
 //PROTECTED - DEPENDENCIES
 template<typename T>
-void rpg_game::registerDependency(T *(*factory)(rpg_dependenciesInjector::injector&), bool shouldRetain) noexcept {
+void rpg_game::registerDependency(const std::function<T *(rpg_dependenciesInjector::injector&)>& factory, bool shouldRetain) noexcept {
     m_dependenciesInjector.registerDependency<T>(factory, shouldRetain);
 }
 
