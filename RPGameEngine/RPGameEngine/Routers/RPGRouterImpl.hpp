@@ -9,8 +9,7 @@
 #include "RPGScene.hpp"
 
 template<typename T>
-bool rpg_router::prepareScene(const presentationType type) noexcept {
-    m_presentationType = type;
+bool rpg_router::prepareScene(void) noexcept {
     m_nextScene = m_game->createScene<T>();
     return m_nextScene && runLoading();
 }

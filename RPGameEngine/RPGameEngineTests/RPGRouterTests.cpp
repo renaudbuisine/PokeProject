@@ -14,6 +14,7 @@
 #include "RPGDefaultGame.hpp"
 
 #include "MockScene.hpp"
+#include "MockRouter.hpp"
 
 // STATEFULL VAR / CONFIG
 rpg_game *routerTestsGame;
@@ -37,7 +38,7 @@ void mockedStartTransition(std::shared_ptr<rpg_scene> scene) {
 SCENARIO ("Load and display new scene", "[rpg_router::prepareScene]") {
     if(!routerTestsGame) {
         routerTestsGame = new rpg_default_game("testGame");
-        router = new rpg_router(routerTestsGame);
+        router = new mock_router(routerTestsGame);
         router->setLoadResourcesCallback(mockedLoadResoures);
         router->setTransitionToSceneCallbackCallback(mockedStartTransition);
 
@@ -63,7 +64,7 @@ SCENARIO ("Load and display new scene", "[rpg_router::prepareScene]") {
         }
         
         WHEN ("Preparing scene") {
-            router->prepareScene<mock_scene>();
+            router->prepareScene();
             THEN ("Scene is created from game object and is loading, no scene are added yet to the game") {
                 REQUIRE(mock_scene::mockSceneInst);
                 REQUIRE(router->isLoading());
@@ -107,7 +108,8 @@ SCENARIO ("Load and display new scene", "[rpg_router::prepareScene]") {
         WHEN ("Transition is finished, router is removed from list of updated router from game") {
             isTransitioningScene = false;
             sleep(1);
-            THEN ("Scene is added to game correctly") {
+            THEN ("didEndTransition is called and scene is added to game correctly") {
+                REQUIRE(((mock_router *)router)->didEndTransitionCalled);
                 REQUIRE(!router->isTransitioningToNextScene());
                 REQUIRE(routerTestsGame->updatedRoutersSize() == 0);
                 REQUIRE(routerTestsGame->getScenes().size() == 1);

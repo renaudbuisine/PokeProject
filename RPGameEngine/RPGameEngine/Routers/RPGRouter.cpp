@@ -48,8 +48,6 @@ void rpg_router::endTransition(void) noexcept {
     didEndTransition();
 }
 
-void rpg_router::didEndTransition(void) noexcept { }
-
 //UPDATES
 void rpg_router::update(const float elapsedTimestamp) noexcept {
     if(isTransitioningToNextScene()) {
@@ -85,6 +83,10 @@ bool rpg_router::isLoaded(void) noexcept {
 
 bool rpg_router::isTransitioningToNextScene(void) const noexcept {
     return m_transitioning;
+}
+
+void rpg_router::setPresentationType(const rpg_router::presentationType type) noexcept {
+    m_presentationType = type;
 }
 
 // LOADING

@@ -90,6 +90,7 @@
 		740FFD3D2134461000193C58 /* loguru.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = loguru.hpp; sourceTree = "<group>"; };
 		744D994E2145930A0063B19F /* RPGScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RPGScene.cpp; sourceTree = "<group>"; };
 		74A0E8F22150ED1400974723 /* MockScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MockScene.cpp; sourceTree = "<group>"; };
+		74A0E8F52151639A00974723 /* MockRouter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MockRouter.hpp; sourceTree = "<group>"; };
 		74A58FD9212CBADC00BC8AC8 /* catch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = catch.hpp; path = ../../../ThirdParties/Cpp/Catch/catch.hpp; sourceTree = "<group>"; };
 		74A9743C212A143F00BCFA8C /* RPGameEngineTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RPGameEngineTests; sourceTree = BUILT_PRODUCTS_DIR; };
 		74A9743E212A143F00BCFA8C /* RPGDependenciesInjectorTests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RPGDependenciesInjectorTests.cpp; sourceTree = "<group>"; };
@@ -214,6 +215,7 @@
 				74A97449212A15DE00BCFA8C /* MockDependencies.hpp */,
 				74A0E8F22150ED1400974723 /* MockScene.cpp */,
 				74EFD0EC2148331100930B56 /* MockScene.hpp */,
+				74A0E8F52151639A00974723 /* MockRouter.hpp */,
 			);
 			path = Mock;
 			sourceTree = "<group>";

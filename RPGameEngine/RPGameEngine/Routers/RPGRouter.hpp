@@ -32,11 +32,11 @@ public:
     virtual ~rpg_router(void) noexcept;
     
     //LOADING
-    template<typename T>
-    bool prepareScene(const presentationType = presentationType::root) noexcept;
+    virtual bool prepareScene(void) noexcept = 0;
+    
     //TRANSITIONING
     bool transitionToNextScene(void) noexcept;
-    virtual void didEndTransition(void) noexcept;
+    virtual void didEndTransition(void) noexcept = 0;
     
     //STATUS GETTER
     bool isLoading(void) noexcept;
@@ -46,6 +46,14 @@ public:
     //CALLBACKS
     void setLoadResourcesCallback(loadResourcesCallback) noexcept;
     void setTransitionToSceneCallbackCallback(transitionToSceneCallback) noexcept;
+    
+protected:
+    //LOADING
+    template<typename T>
+    bool prepareScene(void) noexcept;
+    //SETTER
+    void setPresentationType(const presentationType) noexcept;
+    
 private:
     rpg_game *m_game;
     std::shared_ptr<rpg_scene> m_nextScene;
