@@ -9,6 +9,7 @@
 #ifndef RPGame_hpp
 #define RPGame_hpp
 
+#include <stdio.h>
 #include <mutex>
 #include <time.h>
 #include <thread>
@@ -16,13 +17,22 @@
 #include <string>
 
 #include "RPGDependenciesInjector.hpp"
-#include "RPGScene.hpp"
+#include "RPGAsyncTask.hpp"
 
 #define RPG_FPS 30
 
-class rpg_router;
+#define RPGAME_PRESENTATION rpg_game::presentationType
+#define RPGAME_PRESENTATION_PUSH RPGAME_PRESENTATION::push
+#define RPGAME_PRESENTATION_ROOT RPGAME_PRESENTATION::root
+
+class rpg_scene;
+
 class rpg_game {
 public:
+    
+    // PRESENTATION TYPE ENUM
+    enum presentationType { push, root };
+    
     //TYPEALIAS
     using updateCallBack = std::function<void(const float)>;
     using fixedUpdateCallBack = std::function<void(void)>;
@@ -62,21 +72,22 @@ public:
     void stop(void) noexcept;
     
     /**
-     Load initial components of game
+     Load initial components of game - Needs calling - Synchrone function by default
+     (needs overriding)
      */
     virtual void load(void) noexcept = 0;
     
     //Updates
     /**
      called a each loop whatever elapsedtimestamp value
-     (needs override)
+     (needs overriding)
      
      @param elapsedTimestamp elapsed time stamp (in seconds)
      */
     virtual void update(const float elapsedTimestamp) = 0;
     /**
      called 30 times a second
-     (needs override)
+     (needs overriding)
      */
     virtual void fixedUpdate(void) = 0;
     
@@ -105,14 +116,28 @@ public:
     void setRootScene(std::shared_ptr<rpg_scene>& scenePtr) noexcept;
     
     
+    /**
+     Call transition callback to animate transition between scenes
+
+     @param nextScene next scene to display
+     @param type type of transition (push, root)
+     @return....
+     */
+//    bool transitionToNextScene(std::shared_ptr<rpg_scene> nextScene, const presentationType type) noexcept;
+    
+    
+    // TASKS
+    void runTask(std::shared_ptr<rpg_asyncTask>) noexcept;
+    size_t runningTasksSize(void) const noexcept;
+    
+    // SCENES
+    const std::vector<std::shared_ptr<rpg_scene>>& getScenes(void) const noexcept;
+    
     //GETTER SETTER
     void setUpdateCallback(updateCallBack) noexcept;
     void setFixedUpdateCallback(fixedUpdateCallBack) noexcept;
     void setAddSceneCallBack(addSceneCallBack) noexcept;
     void setRemoveSceneCallBack(removeSceneCallBack) noexcept;
-    
-    const std::vector<std::shared_ptr<rpg_scene>>& getScenes(void) const noexcept;
-    size_t updatedRoutersSize(void) const noexcept;
     
 protected:
     
@@ -126,7 +151,7 @@ private:
     //Attributes
     rpg_dependenciesInjector m_dependenciesInjector;
     std::vector<std::shared_ptr<rpg_scene>> m_scenes;
-    std::vector<rpg_router *> m_routers;
+    std::vector<std::shared_ptr<rpg_asyncTask>> m_tasks;
     
     //CALLBACKS
     updateCallBack m_updateCallBack;
@@ -149,25 +174,10 @@ private:
     void innerUpdate(const float);
     void innerFixedUpdate(void);
     void addScene(const std::shared_ptr<rpg_scene>&) noexcept;
-    
-    
-    /**
-     Add router object to list, will be updated by game object
-     
-     @param router Pointer to router object
-     */
-    void addRouter(rpg_router *router) noexcept;
-    /**
-     Remove router pointer from vector
-     
-     @param router router pointer
-     */
-    void removeRouter(rpg_router *router) noexcept;
 };
 
 #include "RPGGameImpl.hpp"
-
-
+#include "RPGScene.hpp"
 #include "RPGRouter.hpp"
 
 #endif /* RPGame_hpp */

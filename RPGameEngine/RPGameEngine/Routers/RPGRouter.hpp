@@ -9,74 +9,76 @@
 #ifndef RPGRouter_hpp
 #define RPGRouter_hpp
 
+#include <stdio.h>
+
 #include "RPGame.hpp"
+#include "RPGScene.hpp"
 
-#include <mutex>
+class rpg_scene;
 
-#define RPGROUTER_PRESENTATION_PUSH rpg_router::presentationType::push
-#define RPGROUTER_PRESENTATION_ROOT rpg_router::presentationType::root
-
-class rpg_game;
-class rpg_router {
+class rpg_router: public rpg_asyncTask::delegate {
 public:
     friend class rpg_game;
     
-    using loadResourcesCallback = std::function<void(void)>;
-    using transitionToSceneCallback = std::function<void(std::shared_ptr<rpg_scene>)>;
+    using transitionFromToSceneCallback = std::function<void(std::shared_ptr<rpg_scene>,std::shared_ptr<rpg_scene>)>;
     
-    // PRESENTATION TYPE ENUM
-    enum presentationType { push, root };
+    // INTERNAL DELEGATE
+    struct delegate {
+        /**
+         When scene is loaded
+         */
+        virtual void didLoad(void) noexcept = 0;
+        /**
+         When transition to new scene is done
+         */
+        virtual void didEndTransition(void) noexcept = 0;
+    };
     
     //CONSTRUCTOR DESTRUCTOR
     rpg_router(rpg_game *) noexcept;
-    virtual ~rpg_router(void) noexcept;
+    virtual ~rpg_router(void) noexcept = default;
     
     //LOADING
     virtual bool prepareScene(void) noexcept = 0;
     
     //TRANSITIONING
-    bool transitionToNextScene(void) noexcept;
-    virtual void didEndTransition(void) noexcept = 0;
+    bool transitionFromScene(std::shared_ptr<rpg_scene>) noexcept;
     
     //STATUS GETTER
     bool isLoading(void) noexcept;
     bool isLoaded(void) noexcept;
     bool isTransitioningToNextScene(void) const noexcept;
+    void setParentDelegate(std::shared_ptr<delegate>);
+    void setTransitionFromToSceneCallback(transitionFromToSceneCallback) noexcept;
     
-    //CALLBACKS
-    void setLoadResourcesCallback(loadResourcesCallback) noexcept;
-    void setTransitionToSceneCallbackCallback(transitionToSceneCallback) noexcept;
+    //rpg_asyncTask::delegate members
+    void didCompleteTask(const rpg_asyncTask&) final;
     
 protected:
     //LOADING
     template<typename T>
     bool prepareScene(void) noexcept;
     //SETTER
-    void setPresentationType(const presentationType) noexcept;
+    void setPresentationType(const RPGAME_PRESENTATION) noexcept;
     
 private:
     rpg_game *m_game;
-    std::shared_ptr<rpg_scene> m_nextScene;
     bool m_transitioning;
-    presentationType m_presentationType;
+    transitionFromToSceneCallback m_transitionCallback;
+    RPGAME_PRESENTATION m_presentationType;
+    std::shared_ptr<rpg_scene> m_pendingScene;
+    std::weak_ptr<rpg_scene> m_scene;
     
     //STATUS
     bool m_loading;
-    bool m_loaded;
     
-    //CALLBACKS
-    loadResourcesCallback m_loadResourcesCallback;
-    transitionToSceneCallback m_transitionToSceneCallback;
-    
-    //MUTEX/THREADING
-    std::mutex m_loadThreadMutex;
-    
+    delegate *m_parentDelegate; //weak
     
     //PRIVATE FUNCTIONS
-    bool runLoading(void) noexcept;
+    void runLoading(void) noexcept;
+    void endLoading(void) noexcept;
     void endTransition(void) noexcept;
     void update(const float elapsedTimestamp) noexcept;
-    void removeFromGame(void) noexcept;
 };
 
 #include "RPGRouterImpl.hpp"

@@ -12,15 +12,24 @@
 #include <stdio.h>
 #include <RPGameEngine/RPGame.hpp>
 
-class poke_game final: public rpg_game {
+#include "PokeRootRouter.hpp"
+
+class poke_game final: public rpg_game, public rpg_router::delegate {
 public:
     poke_game(std::string name) noexcept;
+    ~poke_game(void) noexcept;
     
     void load(void) noexcept;
+    
+    //rpg_router::delegate Members
+    void didLoad(void) noexcept;
+    void didEndTransition(void) noexcept;
     
 private:
     void loadDependencies(void) noexcept;
     void loadRootScene(void) noexcept;
+    
+    poke_rootRouter *m_rootRouter;
 };
 
 #endif /* PokeGame_hpp */

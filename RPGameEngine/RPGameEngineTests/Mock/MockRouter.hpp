@@ -13,10 +13,14 @@
 #include "MockScene.hpp"
 
 struct mock_router final: public rpg_router {
-    mock_router(rpg_game *game) noexcept: rpg_router(game), didEndTransitionCalled(false) { }
+    mock_router(rpg_game *game) noexcept: rpg_router(game), didEndTransitionCalled(false), didLoadCalled(false) { }
     
     void didEndTransition(void) noexcept {
         didEndTransitionCalled = true;
+    }
+    
+    void didLoad(void) noexcept {
+        didLoadCalled = true;
     }
     
     bool prepareScene(void) noexcept {
@@ -24,6 +28,7 @@ struct mock_router final: public rpg_router {
     }
     
     bool didEndTransitionCalled;
+    bool didLoadCalled;
 };
 
 #endif /* MockRouter_hpp */

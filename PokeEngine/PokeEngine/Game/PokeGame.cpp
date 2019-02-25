@@ -11,7 +11,13 @@
 #include "PokeDefaultMapRouter.hpp"
 #include "PokeMapScene.hpp"
 
-poke_game::poke_game(std::string name) noexcept: rpg_game(name) { }
+poke_game::poke_game(std::string name) noexcept: rpg_game(name), m_rootRouter(NULL) { }
+
+poke_game::~poke_game(void) noexcept {
+    if(m_rootRouter) {
+        delete m_rootRouter;
+    }
+}
 
 // LOAD
 
@@ -27,7 +33,18 @@ void poke_game::loadDependencies(void) noexcept {
 }
 
 void poke_game::loadRootScene(void) noexcept {
-//    auto rootScene = createScene<poke_mapScene>();
-//    addScene(rootScene);
-    load router instead
+    
+    m_rootRouter = new poke_rootRouter(this);
+    m_rootRouter->setParentDelegate(std::shared_ptr<rpg_router::delegate>(this));
+    m_rootRouter->prepareScene()
+}
+
+//rpg_router::delegate Members
+
+void poke_game::didLoad(void) noexcept {
+    m_rootRouter->
+}
+
+void poke_game::didEndTransition(void) noexcept {
+    
 }

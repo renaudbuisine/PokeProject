@@ -68,8 +68,10 @@ SCENARIO ("Load and display new scene", "[rpg_router::prepareScene]") {
             THEN ("Scene is created from game object and is loading, no scene are added yet to the game") {
                 REQUIRE(mock_scene::mockSceneInst);
                 REQUIRE(router->isLoading());
-                REQUIRE(routerTestsGame->updatedRoutersSize() == 0);
                 REQUIRE(routerTestsGame->getScenes().size() == 0);
+            }
+            AND_THEN("Router is updated by game") {
+                REQUIRE(routerTestsGame->updatedRoutersSize() == 1);
             }
         }
         WHEN ("Scene is loaded") {
@@ -87,10 +89,13 @@ SCENARIO ("Load and display new scene", "[rpg_router::prepareScene]") {
             sleep(1); // be sure update is called a last time
             THEN ("Router is loaded, ready for transition") {
                 REQUIRE(router->isLoaded());
-                REQUIRE(routerTestsGame->updatedRoutersSize() == 0);
+                REQUIRE(((mock_router *)router)->didLoadCalled);
                 REQUIRE(routerTestsGame->getScenes().size() == 0);
                 REQUIRE(!transitioningScene.lock());
                 REQUIRE(!router->isTransitioningToNextScene());
+            }
+            AND_THEN("Router is not updated by game anymore") {
+                REQUIRE(routerTestsGame->updatedRoutersSize() == 0);
             }
         }
         
@@ -98,10 +103,12 @@ SCENARIO ("Load and display new scene", "[rpg_router::prepareScene]") {
             bool transitioning = router->transitionToNextScene();
             THEN ("Router is added to game, start transition callback is called, still no scene added to game") {
                 REQUIRE(transitioning);
-                REQUIRE(routerTestsGame->updatedRoutersSize() == 1);
                 REQUIRE(routerTestsGame->getScenes().size() == 0);
                 REQUIRE(transitioningScene.lock());
                 REQUIRE(router->isTransitioningToNextScene());
+            }
+            AND_THEN("Router is updated by game") {
+                REQUIRE(routerTestsGame->updatedRoutersSize() == 1);
             }
         }
         
@@ -111,8 +118,10 @@ SCENARIO ("Load and display new scene", "[rpg_router::prepareScene]") {
             THEN ("didEndTransition is called and scene is added to game correctly") {
                 REQUIRE(((mock_router *)router)->didEndTransitionCalled);
                 REQUIRE(!router->isTransitioningToNextScene());
-                REQUIRE(routerTestsGame->updatedRoutersSize() == 0);
                 REQUIRE(routerTestsGame->getScenes().size() == 1);
+            }
+            AND_THEN("Router is not updated by game anymore") {
+                REQUIRE(routerTestsGame->updatedRoutersSize() == 0);
             }
         }
     }

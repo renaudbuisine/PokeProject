@@ -34,7 +34,7 @@
         
         __weak PokeGame *weakSelf = self;
         
-        _game->setAddSceneCallBack(^(std::shared_ptr<rpg_scene> scenePtr){
+        _game->setAddSceneCallBack(^(std::shared_ptr<rpg_scene> scenePtr){ plutot pour le create
             PokeScene *scene = [self sceneFromWrappedScenePtr:scenePtr];
             [weakSelf.delegate game:self didAddScene:scene];
         });

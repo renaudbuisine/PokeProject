@@ -121,7 +121,7 @@
                   moduleName = "RPGameEngineTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/buisinr/Desktop/Projects/PokeProject/ThirdParties/Cpp/Loguru/loguru.hpp"
-                  timestampString = "558982895.299662"
+                  timestampString = "559061632.716856"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "2120"
@@ -136,7 +136,7 @@
                   moduleName = "RPGameEngineTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/buisinr/Desktop/Projects/PokeProject/ThirdParties/Cpp/Loguru/loguru.hpp"
-                  timestampString = "558982895.302676"
+                  timestampString = "559061632.720885"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "2120"
@@ -185,7 +185,7 @@
                   moduleName = "RPGameEngineTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/buisinr/Desktop/Projects/PokeProject/ThirdParties/Cpp/Loguru/loguru.hpp"
-                  timestampString = "558982895.314914"
+                  timestampString = "559061632.737703"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "2614"
@@ -200,7 +200,7 @@
                   moduleName = "RPGameEngineTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/buisinr/Desktop/Projects/PokeProject/ThirdParties/Cpp/Loguru/loguru.hpp"
-                  timestampString = "558982895.317423"
+                  timestampString = "559061632.741304"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "2614"
@@ -233,11 +233,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RPGameEngine/RPGameEngineTests/RPGRouterTests.cpp"
-            timestampString = "558982894.947803"
+            timestampString = "559061632.294003"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "SCENARIO (&quot;Load and display new scene&quot;, &quot;[rpg_router::prepareScene]&quot;)"
             landmarkType = "9">
             <Locations>
@@ -249,12 +249,12 @@
                   moduleName = "RPGameEngineTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/buisinr/Desktop/Projects/PokeProject/RPGameEngine/RPGameEngineTests/RPGRouterTests.cpp"
-                  timestampString = "558953712.834518"
+                  timestampString = "559061566.190411"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "112"
-                  endingLineNumber = "112"
-                  offsetFromSymbolStart = "19399">
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "17858">
                </Location>
                <Location
                   shouldBeEnabled = "No"
@@ -264,60 +264,12 @@
                   moduleName = "RPGameEngineTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/buisinr/Desktop/Projects/PokeProject/RPGameEngine/RPGameEngineTests/RPGRouterTests.cpp"
-                  timestampString = "558953712.8374619"
+                  timestampString = "559061566.193846"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "112"
-                  endingLineNumber = "112"
-                  offsetFromSymbolStart = "19404">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RPGameEngine/RPGameEngineTests/RPGRouterTests.cpp"
-            timestampString = "558982894.9489191"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "SCENARIO (&quot;Load and display new scene&quot;, &quot;[rpg_router::prepareScene]&quot;)"
-            landmarkType = "9">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "____C_A_T_C_H____T_E_S_T____0()"
-                  moduleName = "RPGameEngineTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/buisinr/Desktop/Projects/PokeProject/RPGameEngine/RPGameEngineTests/RPGRouterTests.cpp"
-                  timestampString = "558952856.355918"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "110"
-                  endingLineNumber = "110"
-                  offsetFromSymbolStart = "18482">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "____C_A_T_C_H____T_E_S_T____0()"
-                  moduleName = "RPGameEngineTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/buisinr/Desktop/Projects/PokeProject/RPGameEngine/RPGameEngineTests/RPGRouterTests.cpp"
-                  timestampString = "558952856.358608"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "110"
-                  endingLineNumber = "110"
-                  offsetFromSymbolStart = "18739">
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "17863">
                </Location>
             </Locations>
          </BreakpointContent>

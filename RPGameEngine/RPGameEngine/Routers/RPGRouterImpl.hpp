@@ -6,10 +6,16 @@
 //  Copyright © 2018 Renaud Buisine. All rights reserved.
 //
 
-#include "RPGScene.hpp"
-
 template<typename T>
 bool rpg_router::prepareScene(void) noexcept {
-    m_nextScene = m_game->createScene<T>();
-    return m_nextScene && runLoading();
+    if(m_loading) {
+        return false;
+    }
+    
+    m_pendingScene = m_game->createScene<T>();
+    m_scene = m_pendingScene;
+    m_pendingScene->setRouter(this);
+    runLoading();
+    
+    return true;
 }

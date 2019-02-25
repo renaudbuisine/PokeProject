@@ -7,6 +7,8 @@
 //
 
 #include "RPGame.hpp"
+
+#include "RPGMacro.hpp"
 #include "RPGRouter.hpp"
 
 #include <sstream>
@@ -37,9 +39,7 @@ rpg_game::~rpg_game(void) noexcept {
 void rpg_game::innerUpdate(const float elapsedTimestamp) {
     // update game
     update(elapsedTimestamp);
-    if (m_updateCallBack != NULL) {
-        m_updateCallBack(elapsedTimestamp);
-    }
+    CALL_1(m_updateCallBack, elapsedTimestamp)
     
     //update scenes
     for(auto it = m_scenes.rbegin(); it != m_scenes.rend(); ++it) {
@@ -50,9 +50,14 @@ void rpg_game::innerUpdate(const float elapsedTimestamp) {
     }
     
     //update routers
-    for(auto router: m_routers) {
-        if(router) {
-            router->update(elapsedTimestamp);
+    auto it = m_tasks.begin();
+    while(it != m_tasks.end()) {
+        std::shared_ptr<rpg_asyncTask> taskPtr = *it;
+        if(taskPtr->isCompleted()) {
+            it = m_tasks.erase(it);
+            taskPtr->broadcastDidComplete();
+        } else {
+            ++it;
         }
     }
 }
@@ -88,7 +93,7 @@ void rpg_game::run(void) {
         
         LOG_F(INFO, "START RUNNING %s - %ld", m_name.c_str(), previousTimestamp);
         
-        // m_running is sensitive variable, needs to lock to read it
+        // m_running is sensitive variable, needs locking to read it
         std::unique_lock<decltype(m_runThreadMutex)> lock(m_runThreadMutex);
         while (m_isRunning) {
             lock.unlock(); // running read, we can go on
@@ -150,6 +155,19 @@ void rpg_game::stop(void) noexcept {
     }
 }
 
+// TASKS
+
+void rpg_game::runTask(std::shared_ptr<rpg_asyncTask> taskPtr) noexcept {
+    m_tasks.push_back(taskPtr);
+    std::thread([&]{
+        taskPtr->runTask();
+    }).detach();
+}
+
+size_t rpg_game::runningTasksSize(void) const noexcept {
+    return m_tasks.size();
+}
+
 // GETTER SETTER
 
 void rpg_game::setUpdateCallback(rpg_game::updateCallBack callback) noexcept {
@@ -167,10 +185,6 @@ void rpg_game::setRemoveSceneCallBack(removeSceneCallBack callback) noexcept {
 
 const std::vector<std::shared_ptr<rpg_scene>>& rpg_game::getScenes(void) const noexcept {
     return m_scenes;
-}
-
-size_t rpg_game::updatedRoutersSize(void) const noexcept {
-    return m_routers.size();
 }
 
 // SCENES
@@ -213,19 +227,6 @@ void rpg_game::setRootScene(std::shared_ptr<rpg_scene>& scenePtr) noexcept {
     }
     m_scenes.clear();
     addScene(scenePtr);
-}
-
-// ROUTERS
-
-void rpg_game::addRouter(rpg_router *router) noexcept {
-    m_routers.push_back(router);
-}
-
-void rpg_game::removeRouter(rpg_router *router) noexcept {
-    auto it = std::find(m_routers.begin(), m_routers.end(), router);
-    if(it != m_routers.end()) {
-        m_routers.erase(it);
-    }
 }
 
 // UTILS
